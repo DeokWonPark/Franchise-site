@@ -1,0 +1,54 @@
+header{
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 253, 251);
+}
+header .inner{
+    width: 75%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+header .logo{
+    width: 150px;
+    height: 120px;
+    padding: 10px;
+    cursor: pointer;
+}
+header .sidebox{
+    width: 20%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+header .sidebox .sideBtn{
+    display: flex;
+    cursor: pointer;
+}
+header .sidebox .sideBtn p{
+    font-size: 13px;
+    color: gray;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+header .sidebox .sideBtn p:hover{
+    text-decoration: underline;
+}
+header .sidebox .sideBtn button{
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 11px;
+    cursor: pointer;
+}
+header .sidebox .sideBtn button img{
+    width: 30px;
+    height: 30px;
+}
+header .sidebox .sideBtn button svg{
+    font-size: 30px;
+    color: rgb(50,180, 74);
+}

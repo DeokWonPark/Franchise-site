@@ -1,0 +1,23 @@
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    padding: 0 25px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform color ease-in;
+}
+nav ul li:hover{
+    color: rgb(236, 183, 67);
+    transform: scale(1.1);
+}
