@@ -12,9 +12,9 @@ const Header = (props) => {
                     <p>가맹문의</p>
                 </div>
                 <div className={styles.sideBtn}>
-                    <button className={styles.blogBtn}><img src="../images/naver_logo.png" alt="blog"/></button>
-                    <button className={styles.membershipBtn}><i class="fas fa-phone-square"></i></button>
-                    <button className={styles.membershipBtn}><i class="fas fa-comments"></i></button>
+                    <button className={styles.blogBtn}><img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/naver_logo.png" alt="blog"/></button>
+                    <button className={styles.membershipBtn}><i className="fas fa-phone-square"></i></button>
+                    <button className={styles.membershipBtn}><i className="fas fa-comments"></i></button>
                 </div>
             </div>
             <Nav></Nav>

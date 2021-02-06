@@ -13,7 +13,7 @@ nav ul{
 nav ul li{
     padding: 0 25px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 22px;
     cursor: pointer;
     transition: transform color ease-in;
 }
