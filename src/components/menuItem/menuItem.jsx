@@ -5,15 +5,18 @@ const MenuItem = ({menu}) => {
 
     const menuRef=useRef(null);
 
-    /*useEffect(()=>{
+    useEffect(()=>{
         if(menuRef!==null){
             menuRef.current.style.backgroundImage=`url(${menu.img})`;
             console.log("ds")
         }
-    },[])*/
+    },[])
 
     return <div className={styles.menuItem} ref={menuRef}>
-        <img src={menu.img} alt="menuImg" className={styles.menuImg}/>
+        <div className={styles.menuInfo}>
+            <p>{menu.enName}</p>
+            <h3>{menu.koName}</h3>
+        </div>
     </div>
 }
 

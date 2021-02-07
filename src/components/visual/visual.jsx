@@ -82,7 +82,7 @@ const Visual = (props) => {
         })}
     </section>
         <div className={styles.bulletbox} onClick={handlebullet}>
-            <input type="radio" name="pos" id={styles.pos1} data-value="1" checked/>
+            <input type="radio" name="pos" id={styles.pos1} data-value="1"/>
             <input type="radio" name="pos" id={styles.pos2} data-value="2"/>
             <input type="radio" name="pos" id={styles.pos3} data-value="3"/>
             <input type="radio" name="pos" id={styles.pos4} data-value="4"/>
