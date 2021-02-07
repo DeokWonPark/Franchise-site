@@ -1,0 +1,43 @@
+.foodInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100%/4);
+    height: 80vh;
+    color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.foodInfo .foodInfohead{
+    display: flex;
+    justify-content: center;
+}
+.foodInfo .foodInfohead p{
+    align-self: center;
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight:700;
+}
+.foodInfo .blog{
+    width: 40px;
+    height: 40px;
+}
+.foodInfo h2{
+    font-size: 42px;
+    font-weight:700;
+    padding: 15px;
+}
+.foodInfo p{
+    font-size: 18px;
+    font-weight:500;
+}
+.foodInfo svg{
+    font-weight: 200;
+    font-size: 46px;
+    padding: 30px 40px;
+    color: rgb(252, 251, 250);
+    cursor: pointer;
+}

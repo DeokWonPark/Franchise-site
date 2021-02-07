@@ -1,0 +1,27 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    padding: 3%;
+}
+.menu .menuHead{
+    text-align: center;
+}
+.menu .menuHead h2{
+    font-size: 52px;
+    color: rgb(236, 183, 67);
+    padding-bottom: 10px;
+}
+.menu .menuHead p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.menu .menuItems{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4,25%);
+    /*background: rgb(175, 175, 175);*/
+    /*padding: 5% 1%;*/
+}

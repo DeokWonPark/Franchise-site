@@ -1,41 +1,47 @@
 .visual{
+    width: calc(100%*4);
     display: flex;
-    background-image: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EC%A0%95%EC%8B%9D_3.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-}
-.visual .foodInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80vh;
-    color: white;
+    overflow: hidden;
+    transition: margin-left 2s;
 }
-.visual .foodInfo .foodInfohead{
-    display: flex;
-    justify-content: space-between;
+
+input{
+    display: none;
+    text-align: center;
 }
-.visual .foodInfo .foodInfohead p{
-    align-self: center;
-    padding-left: 15px;
-    font-size: 20px;
-    font-weight:700;
+.bullet{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
 }
-.visual .foodInfo .blog{
-    width: 40px;
-    height: 40px;
+.bullet label{
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 10px;
+    border: 2px solid #666;
+    display: inline-block;
+    background: #fff;
+    font-size: 0;
+    transition: 0.5s;
+    cursor: pointer;
 }
-.visual .foodInfo h2{
-    font-size: 42px;
-    font-weight:700;
-    padding: 15px;
-}
-.visual .foodInfo p{
-    font-size: 18px;
-    font-weight:500;
-}
+
+ /* 슬라이드 조작 */
+ /* #pos1:checked{
+     display: flex;
+ } */
+ #pos1:checked ~ input{color: chocolate; display: block;}
+ #pos2:checked ~ .visual{margin-left:-100%;}
+ #pos3:checked ~ .visual{margin-left:-200%;}
+ #pos4:checked ~ .visual{margin-left:-300%;}
+ /* bullet 조작 */
+ #pos1:checked ~ .bullet label:nth-child(1),
+ #pos2:checked ~ .bullet label:nth-child(2),
+ #pos3:checked ~ .bullet label:nth-child(3),
+ #pos4:checked ~ .bullet label:nth-child(4){background:#666;}

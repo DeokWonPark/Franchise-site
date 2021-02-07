@@ -1,0 +1,17 @@
+.menuItem{
+    height: 200px;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    background: black;
+    transition: color 0.1s ease-in;
+}
+.menuItem:hover{
+    background: rgb(245, 204, 117);
+    z-index: 1;
+}
+.menuItem .menuImg{
+    height: 200px;
+    width: 100%;
+}
