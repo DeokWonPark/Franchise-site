@@ -11,6 +11,11 @@
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
+.foodInfo .foodInfoBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .foodInfo .foodInfohead{
     display: flex;
     justify-content: center;
@@ -28,7 +33,7 @@
 .foodInfo h2{
     font-size: 42px;
     font-weight:700;
-    padding: 15px;
+    padding: 15px 0;
 }
 .foodInfo p{
     font-size: 18px;

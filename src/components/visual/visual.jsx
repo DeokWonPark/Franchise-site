@@ -12,25 +12,25 @@ const Visual = (props) => {
             tag:"#갈쌈냉면, #갈비는 공짜",
             title:"갈비쌈 냉면",
             description:"새콤한 냉면과 달콤한 갈비의 조화로운 맛",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EC%A0%95%EC%8B%9D_3.jpg",
+            img:"https://github.com/DeokWonPark/Franchise-site/blob/master/public/images/%EC%A0%95%EC%8B%9D_3.PNG?raw=true",
         },
         {
             tag:"#왕갈비, #박세리",
             title:"골프채 갈비탕",
             description:"어마무시한 크기의 대왕갈비",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84%ED%83%95.gif",
+            img:"https://postfiles.pstatic.net/MjAyMDEwMjdfMTI3/MDAxNjAzNzkwMzM1NjY1.-XefODsfcaFawomFz34O58fQ51XUQTpEWnVuAvLnLUsg.zZs2lo-6OqCULGUC_ahSInmxKEapeyvG0YcSvFFTfkQg.GIF.skyh1526ss/%EB%B3%B4%EA%B8%80%EB%B3%B4%EA%B8%80.gif?type=w966",
         },
         {
             tag:"#겨울별미, #통갈비 국수",
             title:"홍탕면 & 백탕면",
             description:"담백한 국수에 왕갈비가 통째로!",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B0%B1%ED%83%95%EB%A9%B41.jpg",
+            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B0%B1%ED%83%95%EB%A9%B43.PNG",
         },
         {
             tag:"#집밥 백선생, #불맛",
             title:"불고기 백반",
             description:"불맛나는 불고기와 구수한 된장찌개가 함께 어우러진 백반",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B0%B1%EB%B0%98logo.jpg",
+            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B0%B1%EB%B0%98.PNG",
         },
     ]);
 
@@ -48,7 +48,7 @@ const Visual = (props) => {
      });
     useEffect(()=>{
         if(visualref.current!==null){
-            interval= setInterval(intervalFunc,5000);
+            interval= setInterval(intervalFunc,6000);
         }
     },[]);
 
@@ -57,12 +57,28 @@ const Visual = (props) => {
         time=value;
         slide();
         clearInterval(interval);
-        interval=setInterval(intervalFunc,5000);
+        interval=setInterval(intervalFunc,6000);
+    }
+
+    const handleArrow=(see)=>{
+        if(see==="right"){
+            time=(time+1)%slideItem.length;
+            slide();
+            clearInterval(interval);
+            interval=setInterval(intervalFunc,6000);
+        }
+        else if(see==="left"){
+            time=(time-1)%slideItem.length;
+            time=time<0?0:time;
+            slide();
+            clearInterval(interval);
+            interval=setInterval(intervalFunc,6000);
+        }
     }
 
     return <><section className={styles.visual} ref={visualref}>
         {slideItem.map((item)=>{
-            return <SlideItem item={item} key={item.title}></SlideItem>
+            return <SlideItem item={item} key={item.title} onArrow={handleArrow}></SlideItem>
         })}
     </section>
         <div className={styles.bulletbox} onClick={handlebullet}>
