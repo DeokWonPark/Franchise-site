@@ -18,7 +18,7 @@ const Visual = (props) => {
             tag:"#왕갈비, #박세리",
             title:"골프채 갈비탕",
             description:"어마무시한 크기의 대왕갈비",
-            img:"https://postfiles.pstatic.net/MjAyMDEwMjdfMTI3/MDAxNjAzNzkwMzM1NjY1.-XefODsfcaFawomFz34O58fQ51XUQTpEWnVuAvLnLUsg.zZs2lo-6OqCULGUC_ahSInmxKEapeyvG0YcSvFFTfkQg.GIF.skyh1526ss/%EB%B3%B4%EA%B8%80%EB%B3%B4%EA%B8%80.gif?type=w966",
+            img:"https://github.com/DeokWonPark/Franchise-site/blob/master/public/images/%EA%B0%88%EB%B9%84%ED%83%95.gif?raw=true",
         },
         {
             tag:"#겨울별미, #통갈비 국수",
