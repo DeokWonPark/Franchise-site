@@ -39,6 +39,9 @@
     font-size: 18px;
     font-weight:500;
 }
+.foodInfo .tag{
+    font-size: 16px;
+}
 .foodInfo svg{
     font-weight: 200;
     font-size: 46px;

@@ -30,3 +30,12 @@
     height: 200px;
     width: 100%;
 }
+/* scroll-animation */
+.scroll{
+    transition: all 1s ease;
+    transform: translate(-400%,0);
+}
+.scroll.show{
+    /* transform: translate(0,-100px); */
+    transform: none;
+}

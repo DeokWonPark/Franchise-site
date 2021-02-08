@@ -16,7 +16,7 @@ const Menu = (props) => {
             img:"https://github.com/DeokWonPark/Franchise-site/blob/master/public/images/%EC%A0%95%EC%8B%9D_3.PNG?raw=true",
         },
         {
-            enName:"Koradn Soup",
+            enName:"Korean Soup",
             koName:"찜/탕 메뉴",
             img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84%ED%83%95logo.PNG",
         },

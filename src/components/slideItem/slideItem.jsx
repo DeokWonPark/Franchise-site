@@ -24,6 +24,7 @@ const SlideItem = ({item,onArrow}) => {
                     </div>
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
+                    <p className={styles.tag}>{item.tag}</p>
                 </div>
                 <button onClick={handleArrow.bind(this,"right")}><i className="fas fa-chevron-right"></i></button>
             </span>

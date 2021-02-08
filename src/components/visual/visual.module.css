@@ -24,24 +24,13 @@ input{
     height: 10px;
     margin: 0 3px;
     border-radius: 10px;
-    border: 2px solid #666;
+    border: 2px solid rgb(255, 214, 81);
     display: inline-block;
     background: #fff;
     font-size: 0;
     transition: 0.5s;
     cursor: pointer;
 }
-
- /* 슬라이드 조작 */
- /* #pos1:checked{
-     display: flex;
- } */
- #pos1:checked ~ input{color: chocolate; display: block;}
- #pos2:checked ~ .visual{margin-left:-100%;}
- #pos3:checked ~ .visual{margin-left:-200%;}
- #pos4:checked ~ .visual{margin-left:-300%;}
- /* bullet 조작 */
- #pos1:checked ~ .bullet label:nth-child(1),
- #pos2:checked ~ .bullet label:nth-child(2),
- #pos3:checked ~ .bullet label:nth-child(3),
- #pos4:checked ~ .bullet label:nth-child(4){background:#666;}
+.bullet label:nth-child(1){
+    background: rgb(236, 183, 67);
+}
