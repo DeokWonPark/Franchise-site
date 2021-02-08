@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SlideItem from '../slideItem/slideItem';
 import styles from './visual.module.css';
 
-const Visual = (props) => {
+const Visual = ({bulletref}) => {
 
     const [slideItem,setItem]=useState([
         {
@@ -35,7 +35,6 @@ const Visual = (props) => {
     ]);
 
     const visualref=useRef(null);
-    const bulletref=useRef(null);
     let time=0;
     let interval;
 

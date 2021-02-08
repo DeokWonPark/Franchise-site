@@ -14,7 +14,6 @@
 }
 .menuItem .menuInfo:hover{
     background-color: #fdbb2c90;
-    /* opacity: 0.7; */
 }
 .menuItem .menuInfo p{
     font-size: 18px;
@@ -30,12 +29,12 @@
     height: 200px;
     width: 100%;
 }
+
 /* scroll-animation */
 .scroll{
     transition: all 1s ease;
     transform: translate(-400%,0);
 }
 .scroll.show{
-    /* transform: translate(0,-100px); */
     transform: none;
 }
