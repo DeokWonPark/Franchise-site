@@ -5,31 +5,26 @@ import classNames from 'classnames';
 const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
 
     const menuRef=useRef(null);
-    let checkpoint;
 
     useEffect(()=>{
         if(menuRef!==null){
             menuRef.current.style.backgroundImage=`url(${menu.img})`;
         }
-        window.addEventListener('mousewheel', onScroll);
-        window.addEventListener('mousewheel', scrollFunc);
-        // window.addEventListener('touch', onScroll);
-        // window.addEventListener('touch', scrollFunc);
+        window.addEventListener('scroll', scrollFunc);
     },[])
 
-    const body=document.querySelector('body');
-
     const scrollFunc=async ()=>{
-        checkpoint=Number.parseInt(body.getBoundingClientRect().top-checkpoint2ref.current.getBoundingClientRect().top);
         if(!menuRef.current.classList.contains(styles.show)){
-            if(body.style.marginTop===`${checkpoint}px`){
+            const scrolly=menuRef.current.getBoundingClientRect().top;
+            if(window.innerHeight > scrolly){
                 menuRef.current.classList.add(styles.show);
                 menufooterref[0].current.style.transform="none";
                 menufooterref[1].current.style.transform="none";
             }
         }
         else{
-            if(body.style.marginTop!==`${checkpoint}px`){
+            const scrolly=menuRef.current.getBoundingClientRect().top;
+            if(window.innerHeight < scrolly){
                 menuRef.current.classList.remove(styles.show);
                 menufooterref[0].current.style.transition="all 1s ease";
                 menufooterref[0].current.style.transform="translate(0,200%)";

@@ -9,8 +9,6 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow: hidden;
-  transition: margin-top 2s;
 }
 
 code {

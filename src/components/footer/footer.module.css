@@ -1,0 +1,28 @@
+.footer{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(233, 185, 83);
+    padding: 6vh 18vw;
+    box-sizing: border-box;
+}
+.footer .footerDescription{
+    color: white;
+    font-size: 18px;
+}
+.footer .footerDescription .description{
+    display: flex;
+    padding: 5px;
+}
+/* .footer .BtnBox .blogBtn{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.footer .BtnBox .blogBtn img{
+    width: 30px;
+    height: 30px;
+} */

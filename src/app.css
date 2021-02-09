@@ -2,3 +2,6 @@
 body{
     font-family: 'Jua', sans-serif;
 }
+.full-page-controls{
+    display: none;
+}

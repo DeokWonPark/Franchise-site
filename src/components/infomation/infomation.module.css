@@ -1,13 +1,64 @@
 .infomation{
     width: 100%;
-    height: 450px;
+    height: 70vh;
     background-image: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%80%EA%B2%8C%20%ED%99%802.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    margin-top: 80vh;
+    transform: translate(0,0);
+    transform: scale(0.5);
+    transition: all .5s ease;
+}
+.infomation.show{
+    transform: translate(0,0);
 }
 .infomation .infomationBox{
     width: 100%;
     height: 100%;
-    background: #00000099;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000e7;
+}
+.infomation .infoImg{
+    width: 40%;
+    height: 80%;
+    border-radius: 20px;
+    margin-right: 10vh;
+}
+.infomation .infoBox{
+    color: white;
+    margin-left: 10vh;
+}
+.infomation .infoTitle{
+    display: block;
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+.infomation .infoTitle h2:nth-child(2){
+    font-size: 52px;
+    color: rgb(233, 185, 83);
+    margin-top: 10px;
+}
+.infomation .infoDescription{
+    font-size: 22px;
+    display: block;
+    margin-bottom: 40px;
+}
+.infomation .infoDescription p{
+    padding: 5px;
+}
+.infomation .infoBtn button:nth-child(1){
+    background: rgb(233, 185, 83);
+    color: black;
+}
+.infomation .infoBtn button{
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    border: 0.5px solid rgb(233, 185, 83);
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
 }

@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import MenuItem from '../menuItem/menuItem';
 import styles from './menu.module.css';
 
-const Menu = ({checkpoint2ref,onScroll}) => {
+const Menu = (props) => {
     const [menu,setMenu]=useState([
         {
             enName:"Noodle Menu",
@@ -31,18 +31,18 @@ const Menu = ({checkpoint2ref,onScroll}) => {
     const menufooterref_=useRef(null);
     //const checkpoint2ref=useRef(null);
 
-    return <section className={styles.menu} ref={checkpoint2ref}>
+    return <section className={styles.menu}>
         <div className={styles.menuHead}>
             <h2>MENU</h2>
             <p>갈비주는 냉면 설악본가의 메뉴를 소개합니다.</p>
         </div>
         <ul className={styles.menuItems}>
             {menu.map((item)=>{
-                return <MenuItem menu={item} key={item.enName} menufooterref={[menufooterref,menufooterref_]} checkpoint2ref={checkpoint2ref} onScroll={onScroll}></MenuItem>
+                return <MenuItem menu={item} key={item.enName} menufooterref={[menufooterref,menufooterref_]}></MenuItem>
             })}
         </ul>
         <span className={styles.menufooter}>
-            <p ref={menufooterref} className={styles.foot1}>" 갈쌈냉면 "만의 매혹적인 맛!</p>
+            <p ref={menufooterref} className={styles.foot1}>" 갈비쌈냉면 "만의 매혹적인 맛!</p>
             <p ref={menufooterref_}>지금바로 느껴보세요~</p>
         </span>
     </section>
