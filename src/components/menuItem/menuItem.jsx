@@ -10,25 +10,26 @@ const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
     useEffect(()=>{
         if(menuRef!==null){
             menuRef.current.style.backgroundImage=`url(${menu.img})`;
-            checkpoint=Number.parseInt(window.pageYOffset+checkpoint2ref.current.getBoundingClientRect().top);
         }
         window.addEventListener('mousewheel', onScroll);
         window.addEventListener('mousewheel', scrollFunc);
+        // window.addEventListener('touch', onScroll);
+        // window.addEventListener('touch', scrollFunc);
     },[])
 
     const body=document.querySelector('body');
 
     const scrollFunc=async ()=>{
-        
+        checkpoint=Number.parseInt(body.getBoundingClientRect().top-checkpoint2ref.current.getBoundingClientRect().top);
         if(!menuRef.current.classList.contains(styles.show)){
-            if(body.style.marginTop===`-${checkpoint}px`){
+            if(body.style.marginTop===`${checkpoint}px`){
                 menuRef.current.classList.add(styles.show);
                 menufooterref[0].current.style.transform="none";
                 menufooterref[1].current.style.transform="none";
             }
         }
         else{
-            if(body.style.marginTop!==`-${checkpoint}px`){
+            if(body.style.marginTop!==`${checkpoint}px`){
                 menuRef.current.classList.remove(styles.show);
                 menufooterref[0].current.style.transition="all 1s ease";
                 menufooterref[0].current.style.transform="translate(0,200%)";

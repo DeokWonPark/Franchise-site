@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   overflow: hidden;
-  transition: margin-top 0.5s;
+  transition: margin-top 2s;
 }
 
 code {

@@ -12,32 +12,50 @@ function App() {
   const checkpoint2ref=useRef(null);
   const checkpoint3ref=useRef(null);
   const bulletref=useRef(null);
+  const body=document.querySelector('body');
 
   useEffect(()=>{
-     body.style.marginTop="0px";
-    checkpoint2=Number.parseInt(window.pageYOffset+checkpoint2ref.current.getBoundingClientRect().top);
-    checkpoint3=Number.parseInt(window.pageYOffset+checkpoint3ref.current.getBoundingClientRect().top);
+    body.style.marginTop="0px";
+    console.log(body.style.marginTop);
+    console.log(checkpoint3ref.current.getBoundingClientRect());
+    checkpoint2=Number.parseInt(body.getBoundingClientRect().top-checkpoint2ref.current.getBoundingClientRect().top);
+    checkpoint3=Number.parseInt(body.getBoundingClientRect().top-checkpoint3ref.current.getBoundingClientRect().top);
   },[]);
 
-  const body=document.querySelector('body');
+  //const s=window.innerHeight;
   const scrollCheckPoint=(e)=>{
-    if(e.deltaY===125){
-      if(body.style.marginTop===`-${checkpoint2}px`){
-        body.style.marginTop=`-${checkpoint3}px`;
+    console.log(e);
+    checkpoint2=Number.parseInt(body.getBoundingClientRect().top-checkpoint2ref.current.getBoundingClientRect().top);
+    checkpoint3=Number.parseInt(body.getBoundingClientRect().top-checkpoint3ref.current.getBoundingClientRect().top);
+
+    let marginTop=body.style.marginTop;
+    window.removeEventListener("mousewheel",scrollCheckPoint);
+    marginTop=Number.parseInt(marginTop.substring(0,marginTop.length-2));
+
+    //console.log(marginTop, checkpoint2ref.current.getBoundingClientRect().top);
+    //console.log(e.deltaY, checkpoint2, checkpoint3);
+
+    if(e.deltaY>0){
+      if(body.style.marginTop===`${checkpoint2}px`){
+        body.style.marginTop=`${checkpoint3}px`;
       }
       else if(body.style.marginTop===`0px`){
-        body.style.marginTop=`-${checkpoint2}px`;
+        body.style.marginTop=`${checkpoint2}px`;
         bulletref.current.style.display="none";
       }
     }
     else{
-      if(body.style.marginTop===`-${checkpoint2}px`){
+      if(marginTop>=checkpoint2 && marginTop<0){
         body.style.marginTop=`0px`;
         bulletref.current.style.display="block";
       }
-      else if(body.style.marginTop===`-${checkpoint3}px`){
-        body.style.marginTop=`-${checkpoint2}px`;
+      else if(marginTop>=checkpoint3 && marginTop<checkpoint2){
+        body.style.marginTop=`${checkpoint2}px`;
       }
+    }
+    console.log(body.style.marginTop);
+    if(body.style.marginTop===`${checkpoint2}px` || body.style.marginTop===`${checkpoint3}px`){
+      window.addEventListener('mousewheel', scrollCheckPoint);
     }
   }
 
