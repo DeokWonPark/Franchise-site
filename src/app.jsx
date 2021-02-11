@@ -12,7 +12,7 @@ function App() {
   return <BrowserRouter>
     <Switch>
       <Route path={"/"} exact={true}>
-      <FullPage controls>
+      {/* <FullPage controls>
         <Slide>
           <Header></Header>
           <Visual></Visual>
@@ -24,7 +24,12 @@ function App() {
           <Infomation></Infomation>
           <Footer></Footer>
         </Slide>
-      </FullPage>
+      </FullPage> */}
+        <Header></Header>
+        <Visual></Visual>
+        <Menu></Menu>
+        <Infomation></Infomation>
+        <Footer></Footer>
       </Route>
 
     </Switch>

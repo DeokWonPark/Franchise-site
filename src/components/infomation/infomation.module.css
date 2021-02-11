@@ -1,6 +1,7 @@
 .infomation{
     width: 100%;
     height: 70vh;
+    margin: 27% 0 0 0; /*full-screen x*/
     background-image: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%80%EA%B2%8C%20%ED%99%802.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;

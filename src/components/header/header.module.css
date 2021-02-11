@@ -52,3 +52,9 @@ header .sidebox .sideBtn button svg{
     font-size: 30px;
     color: rgb(50,180, 74);
 }
+
+@media screen and (max-width:1240px){
+    header .inner{
+        width: 100%;
+    }
+}
