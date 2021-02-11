@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './nav.module.css';
 
-const Nav = (props) => {
-    return <nav>
+const Nav = ({navref}) => {
+    return <nav ref={navref}>
         <ul>
             <li>브랜드소개</li>
             <li>메뉴소개</li>

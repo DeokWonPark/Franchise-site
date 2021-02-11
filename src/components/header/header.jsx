@@ -1,11 +1,19 @@
 import React from 'react';
+import { useRef } from 'react/cjs/react.development';
 import Nav from '../nav/nav';
 import styles from './header.module.css';
 
 const Header = (props) => {
+    const navref=useRef(null);
+    const sideref=useRef(null);
+
+    const handletoggle=()=>{
+        navref.current.classList.toggle(styles.toggle);
+        sideref.current.classList.toggle(styles.toggle);
+    }
     return <header>
         <div className={styles.inner}>
-            <div className={styles.sidebox}>
+            <div className={styles.sidebox} ref={sideref}>
                 <div className={styles.sideBtn}>
                     <p>로그인</p>
                     <p>|</p>
@@ -15,10 +23,14 @@ const Header = (props) => {
                     <button className={styles.blogBtn}><a href="https://blog.naver.com/skyh1526ss"><img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/naver_logo.png" alt="blog"/></a></button>
                     <button className={styles.membershipBtn}><i className="fas fa-phone-square"></i></button>
                     <button className={styles.membershipBtn}><i className="fas fa-comments"></i></button>
+                    <button className={styles.userBtn}><i className="fas fa-user"></i></button>
                 </div>
             </div>
-            <Nav></Nav>
-            <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main_logo.png" alt="logo" className={styles.logo}/>
+            <Nav navref={navref}></Nav>
+            <div className={styles.logo}>
+                <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main_logo.png" alt="logo"/>
+                <button className={styles.hambuger} onClick={handletoggle}><i className="fas fa-bars"></i></button>
+            </div>
         </div>
     </header>
 }
