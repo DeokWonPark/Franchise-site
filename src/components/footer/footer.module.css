@@ -26,3 +26,24 @@
     width: 30px;
     height: 30px;
 } */
+
+@media screen and (max-width:1240px){
+    .footer{
+        padding: 6vh 0;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:768px){
+    .footer .footerDescription{
+        font-size: 14px;
+    }
+    .footer .footerDescription .description:nth-child(1),
+    .footer .footerDescription .description:nth-child(2){
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:768px){
+    .footer .footerDescription{
+        font-size: 12px;
+    }
+}

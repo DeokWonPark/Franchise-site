@@ -1,6 +1,7 @@
 
-body {
+body,html {
   margin: 0;
+  max-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,6 +10,9 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 code {
@@ -19,5 +23,7 @@ code {
 button{
   background: none;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 *:focus { outline:none; }

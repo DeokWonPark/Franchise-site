@@ -8,6 +8,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center center;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
@@ -48,4 +49,16 @@
     padding: 30px 40px;
     color: rgb(252, 251, 250);
     cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .foodInfo{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        justify-content: center;
+        background-attachment: local;
+    }
+    .foodInfo button{
+        display: none;
+    }
 }

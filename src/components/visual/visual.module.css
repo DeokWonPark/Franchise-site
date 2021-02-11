@@ -11,12 +11,12 @@ input{
     text-align: center;
 }
 .bullet{
-    position: absolute;
+    /* position: absolute;
     bottom: 20px;
     left: 0;
-    right: 0;
+    right: 0; */
     text-align: center;
-    z-index: 10;
+    /* z-index: 10; */
 }
 .bullet label{
     text-align: center;
