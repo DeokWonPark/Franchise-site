@@ -1,0 +1,14 @@
+.topView{
+    width: 100%;
+    height: 30vh;
+}
+.topView .topImg{
+    background: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

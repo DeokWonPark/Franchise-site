@@ -43,6 +43,9 @@ const Visual = (props) => {
         visualref.current.style.marginLeft=`calc(${time}*-100%)`;
     })
      const intervalFunc=useCallback(()=>{
+        if(bulletref.current===null){
+            return;
+        }
         bulletref.current.children[time].style.background="#fff";
         time=(time+1)%slideItem.length;
         slide();

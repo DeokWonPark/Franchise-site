@@ -1,15 +1,20 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { useRef } from 'react/cjs/react.development';
 import Nav from '../nav/nav';
 import styles from './header.module.css';
 
 const Header = (props) => {
+    const history=useHistory();
     const navref=useRef(null);
     const sideref=useRef(null);
 
     const handletoggle=()=>{
         navref.current.classList.toggle(styles.toggle);
         sideref.current.classList.toggle(styles.toggle);
+    }
+    const handlehome=()=>{
+        history.push("/");
     }
     return <header>
         <div className={styles.inner}>
@@ -27,7 +32,7 @@ const Header = (props) => {
                 </div>
             </div>
             <Nav navref={navref}></Nav>
-            <div className={styles.logo}>
+            <div className={styles.logo} onClick={handlehome}>
                 <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main_logo.png" alt="logo"/>
                 <button className={styles.hambuger} onClick={handletoggle}><i className="fas fa-bars"></i></button>
             </div>

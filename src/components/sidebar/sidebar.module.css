@@ -1,0 +1,23 @@
+.sidebarBtn{
+    position: fixed;
+    right: 6vw;
+    bottom: 10vh;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(233, 185, 83);
+    border: 2px solid rgb(138, 135, 130);
+    z-index: 20;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.sidebarBtn svg{
+    font-size: 52px;
+    padding: 10px;
+}
+@media screen and (max-width:1024px){
+    .sidebarBtn{
+        display: none;
+    }
+}
