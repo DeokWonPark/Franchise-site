@@ -8,15 +8,17 @@ const Header = (props) => {
     const history=useHistory();
     const navref=useRef(null);
     const sideref=useRef(null);
+    const headerref=useRef(null);
 
     const handletoggle=()=>{
         navref.current.classList.toggle(styles.toggle);
         sideref.current.classList.toggle(styles.toggle);
     }
     const handlehome=()=>{
+        // headerref.current.style.borderBottom="7px solid rgb(233, 185, 83)";
         history.push("/");
     }
-    return <header>
+    return <header ref={headerref}>
         <div className={styles.inner}>
             <div className={styles.sidebox} ref={sideref}>
                 <div className={styles.sideBtn}>
@@ -32,8 +34,8 @@ const Header = (props) => {
                 </div>
             </div>
             <Nav navref={navref}></Nav>
-            <div className={styles.logo} onClick={handlehome}>
-                <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main_logo.png" alt="logo"/>
+            <div className={styles.logo}>
+                <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main_logo.png" alt="logo" onClick={handlehome}/>
                 <button className={styles.hambuger} onClick={handletoggle}><i className="fas fa-bars"></i></button>
             </div>
         </div>

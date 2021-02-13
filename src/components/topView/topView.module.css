@@ -1,14 +1,56 @@
 .topView{
     width: 100%;
-    height: 30vh;
+    height: 45vh;
+    position: relative;
 }
 .topView .topImg{
-    background: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main3.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 100%;
+    height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.topView .topImgBox{
+    width: 100%;
+    height: 100%;
+    background: #000000a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topView .topImgBox h2{
+    color: white;
+    font-size: 62px;
+    font-weight: 900;
+}
+.topView .topNav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 9%;
+    background: rgb(233, 185, 83);
+    
+}
+.topView .topNav ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    font-size: 18px;
+}
+.topView .topNav ul li{
+    cursor: pointer;
+    padding: 5px 0;
+}
+.topView .topNav ul li:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width:768px){
+    .topView .topNav ul{
+        width: 100%;
+    }
 }

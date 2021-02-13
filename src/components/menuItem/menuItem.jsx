@@ -14,6 +14,9 @@ const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
     },[])
 
     const scrollFunc=async ()=>{
+        if(menuRef.current===null){
+            return;
+        }
         if(!menuRef.current.classList.contains(styles.show)){
             const scrolly=menuRef.current.getBoundingClientRect().top;
             if(window.innerHeight > scrolly){
@@ -31,6 +34,7 @@ const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
                 menufooterref[1].current.style.transition="all 1s ease";
                 menufooterref[1].current.style.transform="translate(0,200%)";
             }
+            //window.removeEventListener('scroll',scrollFunc);
         }
     }
 

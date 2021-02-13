@@ -11,6 +11,9 @@ const Infomation = (props) => {
     },[])
 
     const scrollInfoFunc=async ()=>{
+        if(infoRef.current===null){
+            return;
+        }
         if(!infoRef.current.classList.contains(styles.show)){
             const scrolly=infoRef.current.getBoundingClientRect().top;
             if(window.innerHeight > scrolly){
@@ -22,6 +25,7 @@ const Infomation = (props) => {
             if(window.innerHeight < scrolly){
                 infoRef.current.classList.remove(styles.show);
             }
+            //window.removeEventListener('scroll',scrollInfoFunc);
         }
     }
 
