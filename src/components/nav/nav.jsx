@@ -9,7 +9,7 @@ const Nav = ({navref}) => {
         if(path===undefined){
             return;
         }
-        history.push(`/${path}`);
+        history.push(`${path}`);
     }
     return <nav ref={navref}>
         <ul onClick={handlepush}>
@@ -18,11 +18,11 @@ const Nav = ({navref}) => {
             <li>매장안내</li>
             <li>프랜차이즈</li>
             <li>커뮤니티</li> */}
-            <li data-value="brand">BRAND</li>
-            <li data-value="menu">MENU</li>
-            <li data-value="franchise">FRANCHISE</li>
-            <li data-value="store">STORE</li>
-            <li data-value="community">COMMUNITY</li>
+            <li data-value="/BRAND">BRAND</li>
+            <li data-value="/MENU/전체 메뉴">MENU</li>
+            <li data-value="/FRANCHISE">FRANCHISE</li>
+            <li data-value="/STORE">STORE</li>
+            <li data-value="/COMMUNITY">COMMUNITY</li>
         </ul>
     </nav>
 }

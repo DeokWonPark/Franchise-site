@@ -1,0 +1,61 @@
+.link{
+    text-decoration: none;
+}
+.menuBox{
+    width: 100%;
+    height: 25vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-size: 48px;
+    padding: 10px 0 0 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+    box-shadow: 5px 10px 8px #888888;
+}
+.menuBox:hover{
+    transform: scale(1.01);
+}
+.menuinfo{
+    display: none;
+    width: 100%;
+    height: 5vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(211, 152, 25);
+    font-size: 16px;
+}
+.menuinfo h2{
+    font-size: 22px;
+    padding-bottom: 5px;
+    color: rgb(238, 168, 18);
+}
+.menuBox.into{
+    font-size: 32px;
+    height: 20vw;
+}
+.menuBox.into h2,
+.menuBox.into h3{
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .menuBox{
+        font-size: 32px;
+    }
+    .menuinfo h2{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:768px){
+    .menuBox{
+        font-size: 24px;
+    }
+    .menuinfo h2{
+        font-size: 20px;
+    }
+    .menuinfo h3{
+        display: none;
+    }
+}

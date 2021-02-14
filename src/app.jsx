@@ -10,36 +10,37 @@ import Infomation from './components/infomation/infomation';
 import Footer from './components/footer/footer';
 import TopView from './components/topView/topView';
 import MenuVisual from './components/sidePage/menuVisual';
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
 
   const [sidePageInfo,setSideInfo]=useState([
     {
-      path:"/brand",
+      path:"/BRAND",
       img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main3_.jpg",
       name:"BRAND",
       tag:["Brand 소개"],
     },
     {
-      path:"/menu",
+      path:"/MENU",
       img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EC%A0%95%EC%8B%9D_3.PNG",
       name:"MENU",
-      tag:["전체메뉴","면 요리","백반 메뉴","찜/탕 메뉴","사이드 메뉴"],
+      tag:["전체 메뉴","면 요리","백반 메뉴","찜&탕 메뉴","사이드 메뉴"],
     },
     {
-      path:"/franchise",
+      path:"/FRANCHISE",
       img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%80%EA%B2%8C%EB%82%B4%EB%B6%80%ED%99%80.PNG",
       name:"FRANCHISE",
       tag:["FRANCHISE 소개"],
     },
     {
-      path:"/store",
+      path:"/STORE",
       img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%80%EA%B2%8C%EC%99%B8%EA%B4%80.PNG",
       name:"STORE",
       tag:["오시는 길"],
     },
     {
-      path:"/community",
+      path:"/COMMUNITY",
       img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/1DSCF8843-00-1.JPG",
       name:"COMMUNITY",
       tag:["공지사항","고객 게시판","가맹문의"],
@@ -79,32 +80,35 @@ function App() {
         </Route>
       })} */}
 
-      <Route path={"/brand"}>
+      <Route path={"/BRAND"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[0]}></TopView>
         <Footer></Footer>
       </Route>
 
-      <Route path={"/menu"}>
+      <Route path={"/MENU"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[1]}></TopView>
-        <MenuVisual></MenuVisual>
+        <Route path={"/MENU/:sort"}>
+          <ScrollToTop></ScrollToTop>
+          <MenuVisual></MenuVisual>
+        </Route>
         <Footer></Footer>
       </Route>
 
-      <Route path={"/franchise"}>
+      <Route path={"/FRANCHISE"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[2]}></TopView>
         <Footer></Footer>
       </Route>
 
-      <Route path={"/store"}>
+      <Route path={"/STORE"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[3]}></TopView>
         <Footer></Footer>
       </Route>
 
-      <Route path={"/community"}>
+      <Route path={"/COMMUNITY"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[4]}></TopView>
         <Footer></Footer>

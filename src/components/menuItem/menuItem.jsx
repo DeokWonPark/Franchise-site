@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef,useEffect } from 'react';
 import styles from './menuItem.module.css';
 import classNames from 'classnames';
+import {Link,useParams} from 'react-router-dom';
 const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
 
     const menuRef=useRef(null);
@@ -38,12 +39,14 @@ const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
         }
     }
 
-    return <div className={classNames(styles.menuItem,styles.scroll)} ref={menuRef}>
-        <div className={styles.menuInfo}>
-            <p>{menu.enName}</p>
-            <h3>{menu.koName}</h3>
+    return <Link to={`/MENU/${menu.koName}`} className={styles.Link}>
+        <div className={classNames(styles.menuItem,styles.scroll)} ref={menuRef}>
+            <div className={styles.menuInfo}>
+                <p>{menu.enName}</p>
+                <h3>{menu.koName}</h3>
+            </div>
         </div>
-    </div>
+    </Link>
 }
 
 export default MenuItem;
