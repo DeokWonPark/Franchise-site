@@ -1,11 +1,12 @@
 import React from 'react';
 import { useRef, useEffect } from 'react/cjs/react.development';
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import styles from './topView.module.css';
 
 const TopView = ({sideInfo}) => {
     const imgref=useRef(null);
     const titleref=useRef(null);
+    const param=useParams();
 
     useEffect(()=>{
         if(imgref.current!==null){
@@ -22,7 +23,11 @@ const TopView = ({sideInfo}) => {
         <div className={styles.topNav}>
             <ul className={styles.topNav}>
                 {sideInfo.tag.map((item)=>{
-                    return <li key={item}><Link to={`/${sideInfo.name}/${item}`} className={styles.link}>{item}</Link></li>
+                    let flag=false;
+                    if(param.sort===item){
+                        flag=true
+                    }
+                    return <li key={item} className={flag?styles.on:""}><Link to={`/${sideInfo.name}/${item}`} className={styles.link}>{item}</Link></li>
                 })}
             </ul>
         </div>

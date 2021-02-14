@@ -88,9 +88,9 @@ function App() {
 
       <Route path={"/MENU"}>
         <Header></Header>
-        <TopView sideInfo={sidePageInfo[1]}></TopView>
         <Route path={"/MENU/:sort"}>
           <ScrollToTop></ScrollToTop>
+          <TopView sideInfo={sidePageInfo[1]}></TopView>
           <MenuVisual></MenuVisual>
         </Route>
         <Footer></Footer>
@@ -110,7 +110,10 @@ function App() {
 
       <Route path={"/COMMUNITY"}>
         <Header></Header>
-        <TopView sideInfo={sidePageInfo[4]}></TopView>
+        <Route path={"/COMMUNITY/:sort"}>
+          <ScrollToTop></ScrollToTop>
+          <TopView sideInfo={sidePageInfo[4]}></TopView>
+        </Route>
         <Footer></Footer>
       </Route>
 

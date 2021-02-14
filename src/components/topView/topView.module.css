@@ -46,6 +46,11 @@
     cursor: pointer;
     padding: 5px 0;
 }
+.topView .topNav ul li.on{
+    font-weight: 700;
+    text-decoration: underline;
+    color: white;
+}
 .topView .topNav ul li .link{
     color: black;
     text-decoration: none;
