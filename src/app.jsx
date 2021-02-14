@@ -11,6 +11,7 @@ import Footer from './components/footer/footer';
 import TopView from './components/topView/topView';
 import MenuVisual from './components/sidePage/menuVisual';
 import ScrollToTop from './components/scrollToTop';
+import Map from './components/map/map';
 
 function App() {
 
@@ -103,8 +104,10 @@ function App() {
       </Route>
 
       <Route path={"/STORE"}>
+        <ScrollToTop></ScrollToTop>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[3]}></TopView>
+        <Map></Map>
         <Footer></Footer>
       </Route>
 

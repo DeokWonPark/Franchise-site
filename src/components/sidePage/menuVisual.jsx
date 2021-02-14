@@ -37,12 +37,12 @@ const MenuVisual = (props) => {
                 {
                     enName:"Cold Noodle with Pork barbecue",
                     koName:"물냉면",
-                    img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%83%89%EB%A9%B4logo2.png",
+                    img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%AC%BC%EB%83%89%EB%A9%B4logo.jpg",
                 },
                 {
                     enName:"Cold Noodle with Pork barbecue and spicy sauce",
                     koName:"비빔냉면",
-                    img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/1DSCF8893-1.JPG",
+                    img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B9%84%EB%B9%94%EB%83%89%EB%A9%B4logo.jpg",
                 },
                 {
                     enName:"Cold Chicken Noodles with Pork barbecue",
@@ -72,12 +72,12 @@ const MenuVisual = (props) => {
                 {
                     enName:"Korean Set Table with Pork barbecue",
                     koName:"갈비 백반",
-                    img:"http://bgkllen.org.au/wp-content/uploads/2019/04/noimage.jpg",
+                    img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84%EB%B0%B1%EB%B0%98.jpg",
                 },
                 {
                     enName:"Korean Set Table with Pork Bulgogi",
                     koName:"불고기 백반(고추장)",
-                    img:"http://bgkllen.org.au/wp-content/uploads/2019/04/noimage.jpg",
+                    img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B6%88%EA%B3%A0%EA%B8%B0%20%EB%B0%B1%EB%B0%98.jpg",
                 },
                 {
                     enName:"Korean Set Table with Pork Bulgogi",
