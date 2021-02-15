@@ -15,9 +15,9 @@ header .logo{
     justify-content: space-between;
 }
 header .logo img{
-    width: 150px;
+    width: 180px;
     height: 120px;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
 }
 header .logo .hambuger{

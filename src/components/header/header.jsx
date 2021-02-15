@@ -35,7 +35,7 @@ const Header = (props) => {
             </div>
             <Nav navref={navref}></Nav>
             <div className={styles.logo}>
-                <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main_logo.png" alt="logo" onClick={handlehome}/>
+                <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/logo2.png" alt="logo" onClick={handlehome}/>
                 <button className={styles.hambuger} onClick={handletoggle}><i className="fas fa-bars"></i></button>
             </div>
         </div>
