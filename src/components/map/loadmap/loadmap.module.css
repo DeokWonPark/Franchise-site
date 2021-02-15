@@ -1,0 +1,57 @@
+.load{
+    display: flex;
+    margin-top: 60px;
+    transition: all 1.5s ease;
+    transform: translate(-100%,0);
+}
+.loadre{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    transition: all 1.5s ease;
+    transform: translate(100%,0);
+}
+.show{
+    transform: none;
+}
+.load img,
+.loadre img{
+    width: 30vw;
+    padding: 0 20px;
+}
+.load p,
+.loadre p{
+    width: 30%;
+    align-self: center;
+    color: rgb(233, 185, 83);
+    line-height: 1.5em;
+}
+
+@media screen and (max-width:1024px){
+    .load img,
+    .loadre img{
+        width: 40vw;
+    }
+}
+@media screen and (max-width:768px){
+    .load img,
+    .loadre img{
+        width: 50vw;
+    }
+}
+@media screen and (max-width:480px){
+    .load,
+    .loadre{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .load img,
+    .loadre img{
+        width: 80%;
+    }
+    .load p,
+    .loadre p{
+        width: 80%;
+    }
+}
