@@ -63,3 +63,12 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width:480px){
+    .topView .topNav ul{
+        font-size: 14px;
+    }
+    .topView .topImgBox h2{
+        font-size: 48px;
+    }
+}

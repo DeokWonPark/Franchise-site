@@ -43,6 +43,7 @@
 @media screen and (max-width:1024px){
     .menuBox{
         font-size: 32px;
+        box-shadow: none;
     }
     .menuinfo h2{
         font-size: 18px;
@@ -51,6 +52,9 @@
 @media screen and (max-width:768px){
     .menuBox{
         font-size: 24px;
+    }
+    .menuBox h3{
+        display: none;
     }
     .menuinfo h2{
         font-size: 20px;

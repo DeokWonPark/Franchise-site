@@ -1,0 +1,85 @@
+.write input{
+    display: block;
+}
+.write{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10% 10% 10%;
+    box-sizing: border-box;
+}
+.write .title{
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.write .writeBox{
+    width: 100%;
+}
+.write .writeBox .writeTable{
+    width: 100%;
+    font-size: 18px;
+    border-top: solid 1px black;
+    margin-bottom: 30px;
+}
+.write .writeBox .writeTable tr{
+    border-bottom: 0.5px solid rgb(228, 227, 227);
+}
+.write .writeBox .writeTable th{
+    width: 20%;
+    padding: 30px;
+    background: rgb(216, 215, 215);
+}
+.write .writeBox .writeTable td{
+    padding-left: 15px;
+}
+.write .writeBox .writeTable td input{
+    width: 90%;
+    border: 1px solid rgb(194, 191, 191);
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.write .writeBox .writeTable td input.short{
+    width: 40%;
+}
+.write .writeBox .writeTable .editorBox{
+    width: 100%;
+    height: 40vw;
+}
+.write .writeBox .submit{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 7px 17px;
+    margin-top: 10px;
+    background: rgb(84, 93, 116);
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .write .writeBox .writeTable{
+        font-size: 14px;
+    }
+    .write .writeBox .writeTable th{
+        padding: 15px;
+    }
+    .write .writeBox .writeTable td input{
+        padding: 5px;
+    }
+}
+@media screen and (max-width:480px){
+    .write .writeBox .writeTable{
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    .write .writeBox .writeTable th{
+        padding: 10px;
+    }
+    .write .writeBox .writeTable td input{
+        padding: 3px;
+    }
+}

@@ -1,0 +1,92 @@
+.board{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10% 10% 10%;
+    box-sizing: border-box;
+}
+.board .title{
+    font-size: 32px;
+    padding-bottom: 60px;
+}
+.board .topBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.board .topBox span{
+    display: block;
+    background: rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 200;
+}
+.board .topBox button{
+    text-decoration: none;
+    background: rgb(226, 167, 40);
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.board .topBox button:hover{
+    background: rgb(235, 192, 102);
+}
+.board .topBox button svg{
+    font-size: 16px;
+    padding-right: 3px;
+}
+.link{
+    font-weight: 700;
+}
+
+.board .boardTable{
+    width: 100%;
+    border: 1px solid gray;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+.board .boardTable th{
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    background: rgb(240, 240, 240);
+    font-size: 18px;
+}
+.board .boardTable td{
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    font-size: 18px;
+    color: gray;
+}
+ .board .pagination{
+     display: flex;
+ }
+ .board .pagination li{
+     display: flex;
+     width: 25px;
+     height: 25px;
+     background: rgb(229, 230, 231);
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     border: 1px solid gray;
+     border-radius: 3px;
+     margin: 5px;
+ }
+
+ @media screen and (max-width:768px){
+     .board{
+         padding: 0;
+     }
+ }
+
+ @media screen and (max-width:480px){
+    .board .boardTable th{
+        font-size: 14px;
+    }
+    .board .boardTable td{
+        font-size: 10px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+.wrapperClassName{
+    border: 0.5px solid rgb(223, 222, 222);
+}
+div.editorClassName{
+    height: 40vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width:480px){
+    div.toolbarClassName{
+        display: none;
+    }
+    div.editorClassName{
+        height: 30vh;
+    }
+}

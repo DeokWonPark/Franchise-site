@@ -12,6 +12,7 @@ import TopView from './components/topView/topView';
 import MenuVisual from './components/sidePage/menuVisual';
 import ScrollToTop from './components/scrollToTop';
 import Map from './components/map/map';
+import Communitysort from './components/communitySort/communitysort';
 
 function App() {
 
@@ -42,7 +43,7 @@ function App() {
     },
     {
       path:"/COMMUNITY",
-      img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/1DSCF8843-00-1.JPG",
+      img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0.jpg",
       name:"COMMUNITY",
       tag:["공지사항","고객 게시판","가맹문의"],
     },
@@ -116,6 +117,7 @@ function App() {
         <Route path={"/COMMUNITY/:sort"}>
           <ScrollToTop></ScrollToTop>
           <TopView sideInfo={sidePageInfo[4]}></TopView>
+          <Communitysort></Communitysort>
         </Route>
         <Footer></Footer>
       </Route>
