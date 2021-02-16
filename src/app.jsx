@@ -14,6 +14,7 @@ import ScrollToTop from './components/scrollToTop';
 import Map from './components/map/map';
 import Communitysort from './components/communitySort/communitysort';
 import Brand from './components/brand/brand';
+import Franchise from './components/franchise/franchise';
 
 function App() {
 
@@ -103,6 +104,7 @@ function App() {
       <Route path={"/FRANCHISE"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[2]}></TopView>
+        <Franchise></Franchise>
         <Footer></Footer>
       </Route>
 

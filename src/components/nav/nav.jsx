@@ -20,7 +20,7 @@ const Nav = ({navref}) => {
             <li>커뮤니티</li> */}
             <li data-value="/BRAND/Brand 소개">BRAND</li>
             <li data-value="/MENU/전체 메뉴">MENU</li>
-            <li data-value="/FRANCHISE">FRANCHISE</li>
+            <li data-value="/FRANCHISE/FRANCHISE 소개">FRANCHISE</li>
             <li data-value="/STORE/오시는 길">STORE</li>
             <li data-value="/COMMUNITY/고객 게시판">COMMUNITY</li>
         </ul>

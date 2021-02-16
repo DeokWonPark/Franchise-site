@@ -1,0 +1,135 @@
+.Franchise{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10% 10% 10%;
+    box-sizing: border-box;
+}
+.Franchise h2{
+    font-size: 32px;
+}
+.Franchise hr{
+    width: 200px;
+    border: 1px solid rgb(233, 185, 83);
+    margin-bottom: 50px;
+}
+.Franchise .infoBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Franchise .infoBox .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 17vw;
+    height: 17vw;
+    background: #ffffff;
+    border: 1px solid rgb(230, 214, 181);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.Franchise .infoBox .info:hover{
+    transform: scale(1.02);
+}
+.Franchise .infoBox .info:nth-child(1){
+    margin-top: 20px;
+}
+.Franchise .infoBox .info:nth-child(2){
+    margin-top: 80px;
+}
+.Franchise .infoBox .info:nth-child(4){
+    margin-top: 40px;
+}
+.Franchise .infoBox .info svg{
+    font-size: 108px;
+    padding-bottom: 30px;
+    color: rgb(238, 171, 26);
+}
+.Franchise .infoBox .info p{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.Franchise .infoBox .info h3{
+    font-size: 29px;
+    font-weight: 700;
+}
+.Franchise .infoBox .info img{
+    width: 15vw;
+    height: 9vw;
+}
+
+@media screen and (max-width:1240px){
+    .Franchise .infoBox .info svg{
+        font-size: 72px;
+    }
+    .Franchise .infoBox .info h3{
+        font-size: 22px;
+    }
+    .Franchise .infoBox .info p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .Franchise .infoBox .info svg{
+        font-size: 58px;
+        padding-bottom: 10px;
+    }
+    .Franchise .infoBox .info h3{
+        font-size: 20px;
+    }
+    .Franchise .infoBox .info p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:768px){
+    .Franchise .infoBox{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Franchise .infoBox .info{
+        width: 90%;
+        height: 30vw;
+    }
+    .Franchise .infoBox .info:nth-child(1){
+        margin-top: 10px;
+    }
+    .Franchise .infoBox .info:nth-child(2){
+        margin-top: 10px;
+    }
+    .Franchise .infoBox .info:nth-child(4){
+        margin-top: 10px;
+    }
+
+    .Franchise .infoBox .info svg{
+        font-size: 72px;
+        padding-bottom: 20px;
+    }
+    .Franchise .infoBox .info h3{
+        font-size: 26px;
+    }
+    .Franchise .infoBox .info p{
+        font-size: 14px;
+    }
+    .Franchise .infoBox .info img{
+        width: 30vw;
+        height: 18vw;
+    }
+}
+
+@media screen and (max-width:480px){
+    .Franchise .infoBox .info svg{
+        font-size: 62px;
+        padding-bottom: 10px;
+    }
+    .Franchise .infoBox .info h3{
+        font-size: 18px;
+    }
+    .Franchise .infoBox .info p{
+        font-size: 12px;
+    }
+}
