@@ -1,6 +1,7 @@
 import React from 'react';
 import Board from '../board/board';
 import Write from '../write/write';
+import Notice from '../notice/notice';
 import { useParams } from 'react-router-dom';
 import { useState,useEffect } from 'react/cjs/react.development';
 
@@ -10,7 +11,7 @@ const Communitysort = (props) => {
     const [components,setComponents]=useState([
         {sort:"고객 게시판", components:<Board></Board>},
         {sort:"가맹문의", components:<Write></Write>},
-        {sort:"공지사항", components:<></>},
+        {sort:"공지사항", components:<Notice></Notice>},
     ]);
 
     useEffect(()=>{

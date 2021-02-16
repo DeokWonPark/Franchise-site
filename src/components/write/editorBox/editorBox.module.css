@@ -13,4 +13,7 @@ div.editorClassName{
     div.editorClassName{
         height: 30vh;
     }
+    .wrapperClassName{
+        display: none;
+    }
 }

@@ -36,6 +36,7 @@ const Write = (props) => {
             </table>
             <div className={styles.editorBox}>
                 <EditorBox></EditorBox>
+                <textarea className={styles.textarea}></textarea>
             </div>
             <button className={styles.submit} onClick={handlesubmit}>등록</button>
         </div>
