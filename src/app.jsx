@@ -13,6 +13,7 @@ import MenuVisual from './components/sidePage/menuVisual';
 import ScrollToTop from './components/scrollToTop';
 import Map from './components/map/map';
 import Communitysort from './components/communitySort/communitysort';
+import Brand from './components/brand/brand';
 
 function App() {
 
@@ -85,6 +86,7 @@ function App() {
       <Route path={"/BRAND"}>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[0]}></TopView>
+        <Brand></Brand>
         <Footer></Footer>
       </Route>
 

@@ -18,7 +18,7 @@ const Nav = ({navref}) => {
             <li>매장안내</li>
             <li>프랜차이즈</li>
             <li>커뮤니티</li> */}
-            <li data-value="/BRAND">BRAND</li>
+            <li data-value="/BRAND/Brand 소개">BRAND</li>
             <li data-value="/MENU/전체 메뉴">MENU</li>
             <li data-value="/FRANCHISE">FRANCHISE</li>
             <li data-value="/STORE/오시는 길">STORE</li>

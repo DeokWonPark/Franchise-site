@@ -9,7 +9,7 @@ const Board = (props) => {
         {
             num:3,
             title:"문의 드립니다.",
-            name:"유지영",
+            name:"김영지",
             Lookup:"7",
             date:"02-16",
             confirm:false,
