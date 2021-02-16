@@ -85,6 +85,7 @@ function App() {
       })} */}
 
       <Route path={"/BRAND"}>
+        <ScrollToTop></ScrollToTop>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[0]}></TopView>
         <Brand></Brand>
@@ -102,6 +103,7 @@ function App() {
       </Route>
 
       <Route path={"/FRANCHISE"}>
+        <ScrollToTop></ScrollToTop>
         <Header></Header>
         <TopView sideInfo={sidePageInfo[2]}></TopView>
         <Franchise></Franchise>

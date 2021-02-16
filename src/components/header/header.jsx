@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory,Link } from 'react-router-dom';
 import { useRef } from 'react/cjs/react.development';
 import Nav from '../nav/nav';
 import styles from './header.module.css';
@@ -15,22 +15,25 @@ const Header = (props) => {
         sideref.current.classList.toggle(styles.toggle);
     }
     const handlehome=()=>{
-        // headerref.current.style.borderBottom="7px solid rgb(233, 185, 83)";
         history.push("/");
     }
     return <header ref={headerref}>
         <div className={styles.inner}>
             <div className={styles.sidebox} ref={sideref}>
                 <div className={styles.sideBtn}>
-                    <p>로그인</p>
+                    <Link to="/COMMUNITY/공지사항">
+                        <p>공지 게시판</p>
+                    </Link>
                     <p>|</p>
-                    <p>가맹문의</p>
+                    <Link to="/COMMUNITY/가맹문의">
+                        <p>가맹문의</p>
+                    </Link>
                 </div>
                 <div className={styles.sideBtn}>
                     <button className={styles.blogBtn}><a href="https://blog.naver.com/skyh1526ss"><img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/naver_logo.png" alt="blog"/></a></button>
                     <button className={styles.membershipBtn}><i className="fas fa-phone-square"></i></button>
-                    <button className={styles.membershipBtn}><i className="fas fa-comments"></i></button>
-                    <button className={styles.userBtn}><i className="fas fa-user"></i></button>
+                    <button className={styles.membershipBtn}><Link to="/COMMUNITY/가맹문의"><i className="fas fa-comments"></i></Link></button>
+                    {/* <button className={styles.userBtn}><i className="fas fa-user"></i></button> */}
                 </div>
             </div>
             <Nav navref={navref}></Nav>

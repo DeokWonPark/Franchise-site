@@ -64,6 +64,9 @@
     padding: 5px;
     cursor: pointer;
 }
+.infomation .infoBtn .link{
+    color: white;
+}
 
 @media screen and (max-width:1240px){
     .infomation .infoBox{

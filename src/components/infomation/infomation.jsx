@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useRef } from 'react/cjs/react.development';
+import { Link } from 'react-router-dom';
 import styles from './infomation.module.css';
 
 const Infomation = (props) => {
@@ -43,9 +44,9 @@ const Infomation = (props) => {
                     <p>#갈쌈냉면 #갈비는 공짜 #설악본가 #여름엔 초계냉면</p>
                 </span>
                 <div className={styles.infoBtn}>
-                    <button>가맹문의</button>
-                    <button>브랜드 소개</button>
-                    <button>커뮤니티</button>
+                    <button><Link to="/COMMUNITY/가맹문의">가맹문의</Link></button>
+                    <button><Link to="/BRAND/Brand 소개" className={styles.link}>브랜드 소개</Link></button>
+                    <button><Link to="/COMMUNITY/고객 게시판" className={styles.link}>커뮤니티</Link></button>
                 </div>
             </div>
         </div>
