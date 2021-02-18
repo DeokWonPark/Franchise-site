@@ -63,3 +63,9 @@
         display: none;
     }
 }
+
+@media screen and (max-width:480px){
+    .menuBox.into{
+        height: 30vw;
+    }
+}

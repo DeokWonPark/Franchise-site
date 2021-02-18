@@ -31,7 +31,7 @@ const Header = (props) => {
                 </div>
                 <div className={styles.sideBtn}>
                     <button className={styles.blogBtn}><a href="https://blog.naver.com/skyh1526ss"><img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/naver_logo.png" alt="blog"/></a></button>
-                    <button className={styles.membershipBtn}><i className="fas fa-phone-square"></i></button>
+                    <button className={styles.membershipBtn}><a href="tel:010-7515-9710"><i className="fas fa-phone-square"></i></a></button>
                     <button className={styles.membershipBtn}><Link to="/COMMUNITY/가맹문의"><i className="fas fa-comments"></i></Link></button>
                     {/* <button className={styles.userBtn}><i className="fas fa-user"></i></button> */}
                 </div>
