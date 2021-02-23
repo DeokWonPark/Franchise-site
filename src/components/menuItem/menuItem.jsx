@@ -27,15 +27,15 @@ const MenuItem = ({menu,menufooterref,checkpoint2ref,onScroll}) => {
             }
         }
         else{
-            const scrolly=menuRef.current.getBoundingClientRect().top;
-            if(window.innerHeight < scrolly){
-                menuRef.current.classList.remove(styles.show);
-                menufooterref[0].current.style.transition="all 1s ease";
-                menufooterref[0].current.style.transform="translate(0,200%)";
-                menufooterref[1].current.style.transition="all 1s ease";
-                menufooterref[1].current.style.transform="translate(0,200%)";
-            }
-            //window.removeEventListener('scroll',scrollFunc);
+            // const scrolly=menuRef.current.getBoundingClientRect().top;
+            // if(window.innerHeight < scrolly){
+            //     menuRef.current.classList.remove(styles.show);
+            //     menufooterref[0].current.style.transition="all 1s ease";
+            //     menufooterref[0].current.style.transform="translate(0,200%)";
+            //     menufooterref[1].current.style.transition="all 1s ease";
+            //     menufooterref[1].current.style.transform="translate(0,200%)";
+            // }
+            window.removeEventListener('scroll',scrollFunc);
         }
     }
 

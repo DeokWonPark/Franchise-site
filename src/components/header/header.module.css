@@ -55,7 +55,7 @@ header .sidebox .sideBtn p{
 header .sidebox .sideBtn p:hover{
     text-decoration: underline;
 }
-header .sidebox .sideBtn button{
+header .sidebox .sideBtn .blogBtn{
     border: none;
     background: none;
     width: 30px;
@@ -73,6 +73,17 @@ header .sidebox .sideBtn button img{
 header .sidebox .sideBtn button svg{
     font-size: 30px;
     color: rgb(50,180, 74);
+}
+header .sidebox .sideBtn .storeBtn{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: rgb(50,180, 74);
+    border-radius: 5px;
+    /* box-shadow: 1px 2px 3px black; */
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1240px){
@@ -95,10 +106,22 @@ header .sidebox .sideBtn button svg{
     header .sidebox{
         padding: 0;
     }
-    header .sidebox .sideBtn button{
+    header .sidebox .sideBtn .blogBtn{
         width: 20px;
         height: 20px;
         margin-right: 11px;
+    }
+    header .sidebox .sideBtn .storeBtn{
+        font-size: 12px;
+        padding: 3px 6px;
+        content: "sad";
+        border-radius: 0;
+    }
+    header .sidebox .sideBtn .storeBtn span{
+        display: none;
+    }
+    header .sidebox .sideBtn .storeBtn::before{
+        content: "Market";
     }
     header .sidebox .sideBtn button img{
         width: 20px;
