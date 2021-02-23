@@ -15,6 +15,7 @@ import Map from './components/map/map';
 import Communitysort from './components/communitySort/communitysort';
 import Brand from './components/brand/brand';
 import Franchise from './components/franchise/franchise';
+import Sales from './components/sales/sales';
 
 function App() {
 
@@ -70,6 +71,7 @@ function App() {
         <Header></Header>
         <Sidebar></Sidebar>
         <Visual></Visual>
+        <Sales></Sales>
         <Menu></Menu>
         <Infomation></Infomation>
         <Footer></Footer>

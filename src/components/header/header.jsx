@@ -19,7 +19,7 @@ const Header = (props) => {
     }
 
     const GoMarket=()=>{
-        alert("죄송합니다. 현재 준비중인 서비스입니다!")
+        alert("죄송합니다. 현재 준비중인 서비스입니다!");
     }
     return <header ref={headerref}>
         <div className={styles.inner}>

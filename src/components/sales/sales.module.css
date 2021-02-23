@@ -1,0 +1,8 @@
+.Sales{
+    width: calc(100%*3);
+    transition: all 1s ease;
+}
+.SalesBox{
+    width: 100%;
+    display: flex;
+}

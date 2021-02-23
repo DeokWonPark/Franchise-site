@@ -1,0 +1,115 @@
+.salesItem{
+    width: calc(100%/3);
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 30px;
+    box-sizing: border-box;
+    background-color: burlywood;
+}
+.salesItem .arrow{
+    font-size: 38px;
+    padding: 0 10vw;
+    height: 30px;
+    cursor: pointer;
+}
+.salesItem .Item{
+    display: flex;
+}
+.salesItem .itemImg{
+    width: 23vw;
+    height: 23vw;
+    margin-right: 50px;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 10px;
+}
+.salesItem .itemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.salesItem .itemInfo .title{
+    font-size: 40px;
+    color: rgb(126, 87, 3);
+    padding: 10px 0;
+}
+.salesItem .itemInfo .enName{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.salesItem .itemInfo .Btn button{
+    margin-top: 30px;
+    margin-right: 15px;
+    border: 1.5px solid gray;
+    color: gray;
+    padding: 10px 35px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.salesItem .itemInfo .Btn button.store{
+    border: 2px solid rgb(197, 125, 17);
+    color: rgb(122, 74, 1);
+}
+.salesItem .itemInfo .Btn button:hover{
+    transform: scale(1.03);
+}
+
+@media screen and (max-width:1350px){
+    .salesItem .itemInfo .Btn button{
+        margin-right: 5px;
+        padding: 5px 10px;
+    }
+}
+@media screen and (max-width:1024px){
+    .salesItem .Item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .salesItem .itemImg{
+        width: 30vw;
+        height: 30vw;
+        margin-right: 0;
+    }
+    .salesItem .itemInfo{
+        align-items: center;
+    }
+}
+@media screen and (max-width:768px){
+    .salesItem{
+        justify-content: space-between;
+    }
+    .salesItem .itemImg{
+        width: 38vw;
+        height: 38vw;
+        margin-right: 0;
+    }
+    .salesItem .itemInfo .title{
+        font-size: 32px;
+    }
+    .salesItem .itemInfo .enName{
+        font-size: 16px;
+    }
+    .salesItem .arrow{
+        padding: 0;
+    }
+}
+@media screen and (max-width:480px){
+    .salesItem .itemImg{
+        width: 45vw;
+        height: 45vw;
+        margin-right: 0;
+    }
+    .salesItem .itemInfo .title{
+        font-size: 30px;
+    }
+    .salesItem .itemInfo .enName{
+        font-size: 14px;
+    }
+    .salesItem .itemInfo .description{
+        font-size: 12px;
+    }
+}
