@@ -1,6 +1,12 @@
+.data{
+    cursor: pointer;
+}
 .data:hover{
     background: rgb(246, 246, 246);
     border-left: 3px solid rgb(233, 185, 83);
+}
+.data td.title{
+    color: black;
 }
 .on p{
     background: tomato;

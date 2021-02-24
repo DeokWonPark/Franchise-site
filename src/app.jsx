@@ -17,7 +17,7 @@ import Brand from './components/brand/brand';
 import Franchise from './components/franchise/franchise';
 import Sales from './components/sales/sales';
 
-function App({fileUpload}) {
+function App({fileUpload,database}) {
 
   const [sidePageInfo,setSideInfo]=useState([
     {
@@ -125,7 +125,7 @@ function App({fileUpload}) {
         <Route path={"/COMMUNITY/:sort"}>
           <ScrollToTop></ScrollToTop>
           <TopView sideInfo={sidePageInfo[4]}></TopView>
-          <Communitysort fileUpload={fileUpload}></Communitysort>
+          <Communitysort fileUpload={fileUpload} database={database}></Communitysort>
         </Route>
         <Footer></Footer>
       </Route>

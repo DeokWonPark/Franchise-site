@@ -1,28 +1,39 @@
 import React from 'react';
 import styles from './write.module.css';
-import EditorBox from './editorBox/editorBox'
+import EditorBox from './editorBox/editorBox';
+//import ReactEncrypt from 'react-encrypt'; 
 import { useRef } from 'react';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-const Write = ({fileUpload}) => {
+const Write = ({fileUpload,database}) => {
     const titleRef=useRef(null);
     const nameRef=useRef(null);
     const passwordRef=useRef(null);
     const fileRef=useRef(null);
-    let messageRef;
     const textRef=useRef(null);
 
     const [files,setFiles]=useState(null);
     const [loading,setLoading]=useState(false);
+    const [message,setMessage]=useState(null);
 
-    const handlesubmit=(event)=>{
+    const history=useHistory();
+
+    const handlesubmit=async (event)=>{
+        const date=new Date();
         const write={
+            id:Date.now(),
             title:titleRef.current.value,
             name:nameRef.current.value,
             password:passwordRef.current.value,
             file:files || "",
+            message:message || "",
+            text:textRef.current.value || "",
+            date:`${date.getMonth()+1} - ${date.getDate()}`,
+            confirm:false,
         }
-        console.log(write)
+        database.write(`Question/${write.id}`,write);
+        history.push("/COMMUNITY/고객 게시판");
     }
 
     const onFileChanged=async (event)=>{
@@ -31,7 +42,6 @@ const Write = ({fileUpload}) => {
         const upload=await fileUpload.uploadFile(event.target.files[0]);
         fileRef.current.removeAttribute("disabled");
         setLoading(false);
-        console.log(upload);
         setFiles(upload.secure_url);
     }
 
@@ -64,7 +74,7 @@ const Write = ({fileUpload}) => {
                 </tbody>
             </table>
             <div className={styles.editorBox}>
-                <EditorBox messageRef={messageRef}></EditorBox>
+                <EditorBox setMessage={setMessage}></EditorBox>
                 <textarea className={styles.textarea} ref={textRef}></textarea>
             </div>
             <button className={styles.submit} onClick={handlesubmit}>등록</button>

@@ -1,13 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import styles from './boardItem.module.css';
 
-const BoardItem = ({item}) => {
-    return <tr className={styles.data}>
-        <td>{item.num}</td>
-        <td><Link to={`/COMMUNITY/고객 게시판/${item.num}`}>{item.title}</Link></td>
+const BoardItem = ({item,num}) => {
+    const history=useHistory();
+    const handleClick=()=>{
+        const input=prompt("작성자 본인만 열람이 가능합니다. \n 비밀번호를 입력해 주세요!");
+        if(input!==item.password){
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+        }
+        history.push(`/COMMUNITY/고객 게시판/${item.id}`);
+    }
+    return <tr className={styles.data} onClick={handleClick}>
+        <td>{num}</td>
+        <td className={styles.title}>{item.title}</td>
         <td>{item.name}</td>
-        <td>{item.Lookup}</td>
+        {/* <td>{item.Lookup}</td> */}
+        <td>-</td>
         <td>{item.date}</td>
         <td className={item.confirm?styles.on:styles.off}><p></p></td>
     </tr>

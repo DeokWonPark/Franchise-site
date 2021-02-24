@@ -3,38 +3,21 @@ import { useState } from 'react/cjs/react.development';
 import {Link, useParams} from 'react-router-dom';
 import styles from './board.module.css';
 import BoardItem from './boarditem/boardItem'
+import { useEffect } from 'react';
 
-const Board = (props) => {
-    const [data,setData]=useState([
-        {
-            num:3,
-            title:"문의 드립니다.",
-            name:"김영지",
-            Lookup:"7",
-            date:"02-16",
-            confirm:false,
-            password:"qwe123",
-        },
-        {
-            num:2,
-            title:"가맹문의 드립니다!!",
-            name:"김종국",
-            Lookup:"3",
-            date:"02-15",
-            confirm:false,
-            password:"abcde556",
-        },
-        {
-            num:1,
-            title:"가맹문의 드립니다.",
-            name:"한수호",
-            Lookup:"2",
-            date:"02-13",
-            confirm:true,
-            password:"ejrdnjs123",
-        },
-    ])
-    const [datalen,setdatalen]=useState(data.length);
+const Board = ({database}) => {
+    let num=0;
+    const [data,setData]=useState({});
+
+    useEffect(()=>{
+        const unmount=database.read(`Question/`,(data)=>{
+            setData(data);
+            setdatalen(Object.keys(data).length);
+        });
+        return ()=>{unmount();}
+    },[database])
+
+    const [datalen,setdatalen]=useState(Object.keys(data).length);
 
     const param=useParams();
     return <section className={styles.board}>
@@ -53,8 +36,13 @@ const Board = (props) => {
                     <th>날짜</th>
                     <th>확인</th>
                 </tr>
-                {data.map((item)=>{
-                    return <BoardItem item={item} key={item.num}></BoardItem>
+                {/* {data.map((item)=>{
+                    num++;
+                    return <BoardItem item={item} key={num} num={num}></BoardItem>
+                })} */}
+                {Object.keys(data).map((key)=>{
+                    num++;
+                    return <BoardItem item={data[key]} key={num} num={num}></BoardItem>
                 })}
             </tbody>
         </table>
