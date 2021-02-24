@@ -14,7 +14,9 @@ body,html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+strong,em{
+  font: revert;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

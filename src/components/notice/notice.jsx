@@ -14,13 +14,15 @@ const Notice = (props) => {
             </div>
         </div>
         <table className={styles.noticeTable}>
-            <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>작성일</th>
-                <th>조회</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회</th>
+                </tr>
+            </thead>
         </table>
         <div className={styles.nodata}>등록된 데이터가 없습니다.</div>
     </section>

@@ -37,7 +37,6 @@ const Board = (props) => {
     const [datalen,setdatalen]=useState(data.length);
 
     const param=useParams();
-    console.log(param)
     return <section className={styles.board}>
         <h2 className={styles.title}>고객 게시판</h2>
         <div className={styles.topBox}>
@@ -45,17 +44,19 @@ const Board = (props) => {
             <button><Link to="/COMMUNITY/가맹문의" className={styles.link}><i className="fas fa-pencil-alt"></i>가맹문의</Link></button>
         </div>
         <table className={styles.boardTable}>
-            <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>글쓴이</th>
-                <th>조회</th>
-                <th>날짜</th>
-                <th>확인</th>
-            </tr>
-            {data.map((item)=>{
-                return <BoardItem item={item} key={item.num}></BoardItem>
-            })}
+            <tbody>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>조회</th>
+                    <th>날짜</th>
+                    <th>확인</th>
+                </tr>
+                {data.map((item)=>{
+                    return <BoardItem item={item} key={item.num}></BoardItem>
+                })}
+            </tbody>
         </table>
         <ul className={styles.pagination}>
             <li><Link to="/COMMUNITY/고객 게시판/"><i className="fas fa-angle-double-left"></i></Link></li>

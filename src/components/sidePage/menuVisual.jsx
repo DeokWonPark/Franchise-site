@@ -80,7 +80,7 @@ const MenuVisual = (props) => {
                     img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%B6%88%EA%B3%A0%EA%B8%B0%20%EB%B0%B1%EB%B0%98.jpg",
                 },
                 {
-                    enName:"Korean Set Table with Pork Bulgogi",
+                    enName:"Korean Set Table with Pork Bulgogi (Soy sauce)",
                     koName:"불고기 백반(간장)",
                     img:"http://bgkllen.org.au/wp-content/uploads/2019/04/noimage.jpg",
                 },

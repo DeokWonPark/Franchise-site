@@ -52,30 +52,32 @@ const Brand = (props) => {
                     </span>
                 </div>
                 <table className={styles.Info}>
-                    <tr>
-                        <th>회&nbsp;사&nbsp;명</th>
-                        <td>JK FOOD(주)</td>
-                    </tr>
-                    <tr>
-                        <th>대 표 이 사</th>
-                        <td>박진국</td>
-                    </tr>
-                    <tr>
-                        <th>대 표 전 화</th>
-                        <td>010-7515-9710</td>
-                    </tr>
-                    <tr>
-                        <th>물 류 센 터</th>
-                        <td>경북 구미시 산동면 임봉길 27-14, 1동 1층</td>
-                    </tr>
-                    <tr>
-                        <th>본&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사</th>
-                        <td>경북 구미시 산호대로31길 12-23(옥계동)</td>
-                    </tr>
-                    <tr>
-                        <th>사업자등록번호</th>
-                        <td>141-19-01355</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>회&nbsp;사&nbsp;명</th>
+                            <td>JK FOOD(주)</td>
+                        </tr>
+                        <tr>
+                            <th>대 표 이 사</th>
+                            <td>박진국</td>
+                        </tr>
+                        <tr>
+                            <th>대 표 전 화</th>
+                            <td>010-7515-9710</td>
+                        </tr>
+                        <tr>
+                            <th>물 류 센 터</th>
+                            <td>경북 구미시 산동면 임봉길 27-14, 1동 1층</td>
+                        </tr>
+                        <tr>
+                            <th>본&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사</th>
+                            <td>경북 구미시 산호대로31길 12-23(옥계동)</td>
+                        </tr>
+                        <tr>
+                            <th>사업자등록번호</th>
+                            <td>141-19-01355</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
