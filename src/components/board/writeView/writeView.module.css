@@ -1,0 +1,87 @@
+.writeBox{
+    width: 100%;
+    height: 100%;
+    padding: 0 10vw 5vh 10vw;
+    box-sizing: border-box;
+}
+.writeBox .inner{
+    border-top: 3px solid black;
+}
+.writeBox .inner .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+.writeBox .inner .info .meta{
+    display: flex;
+    color: gray;
+}
+.writeBox .inner .info .title{
+    font-size: 18px;
+}
+.writeBox .inner .info .meta p{
+    padding-left: 20px;
+}
+.writeBox .inner .main{
+    height: 30vw;
+    padding: 3vw 1vw;
+    border-bottom: 1px solid rgb(221, 220, 220);
+}
+.writeBox .inner .file{
+    padding: 15px;
+    background-color: rgb(253, 253, 253);
+    border-bottom: 1px solid rgb(87, 85, 85);
+}
+.writeBox .inner .footerBtn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.writeBox .inner .footerBtn button{
+    padding: 5px 15px;
+    margin: 10px 2px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: whitesmoke;
+    font-weight: 600;
+    cursor: pointer;
+}
+.writeBox .inner .footerBtn button.highlight{
+    padding: 5px 17px;
+    background-color: rgb(84, 93, 116);
+    border: none;
+    color: white;
+}
+
+@media screen and (max-width:768px){
+    .writeBox{
+        padding: 0 0 5vh 0;
+    }
+    .writeBox .inner .main{
+        height: 60vw;
+    }
+    .writeBox .inner .info .meta{
+        font-size: 13px;
+    }
+    .writeBox .inner .info .title{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .writeBox .inner .main{
+        height: 70vw;
+    }
+    .writeBox .inner .info .meta{
+        font-size: 11px;
+    }
+    .writeBox .inner .info .title{
+        font-size: 14px;
+    }
+    .writeBox .inner .info .meta p{
+        padding-left: 10px;
+    }
+    .writeBox .inner .file{
+        font-size: 14px;
+    }
+}

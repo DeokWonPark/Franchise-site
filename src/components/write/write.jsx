@@ -13,7 +13,7 @@ const Write = ({fileUpload,database}) => {
     const fileRef=useRef(null);
     const textRef=useRef(null);
 
-    const [files,setFiles]=useState(null);
+    const [files,setFiles]=useState({fileURL:null,fileName:null});
     const [loading,setLoading]=useState(false);
     const [message,setMessage]=useState(null);
 
@@ -26,14 +26,15 @@ const Write = ({fileUpload,database}) => {
             title:titleRef.current.value,
             name:nameRef.current.value,
             password:passwordRef.current.value,
-            file:files || "",
+            file:files.fileURL || "#",
+            fileName:files.fileName || "",
             message:message || "",
             text:textRef.current.value || "",
-            date:`${date.getFullYear()} / ${date.getMonth()+1} - ${date.getDate()}`,
+            date:`${date.getFullYear()} / ${date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1} - ${date.getDate()}`,
             confirm:false,
         }
         database.write(`Question/${write.id}`,write);
-        history.push("/COMMUNITY/고객 게시판");
+        history.push("/COMMUNITY/고객 게시판/1");
     }
 
     const onFileChanged=async (event)=>{
@@ -42,7 +43,7 @@ const Write = ({fileUpload,database}) => {
         const upload=await fileUpload.uploadFile(event.target.files[0]);
         fileRef.current.removeAttribute("disabled");
         setLoading(false);
-        setFiles(upload.secure_url);
+        setFiles({fileURL:upload.secure_url,fileName:`${upload.original_filename}.${upload.format}`});
     }
 
     return <section className={styles.write}>

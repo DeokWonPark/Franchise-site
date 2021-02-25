@@ -25,11 +25,11 @@ const Header = (props) => {
         <div className={styles.inner}>
             <div className={styles.sidebox} ref={sideref}>
                 <div className={styles.sideBtn}>
-                    <Link to="/COMMUNITY/공지사항">
+                    <Link to="/COMMUNITY/공지사항/1">
                         <p>공지 게시판</p>
                     </Link>
                     <p>|</p>
-                    <Link to="/COMMUNITY/가맹문의">
+                    <Link to="/COMMUNITY/가맹문의/1">
                         <p>가맹문의</p>
                     </Link>
                 </div>

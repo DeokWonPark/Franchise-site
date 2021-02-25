@@ -122,7 +122,7 @@ function App({fileUpload,database}) {
 
       <Route path={"/COMMUNITY"}>
         <Header></Header>
-        <Route path={"/COMMUNITY/:sort"}>
+        <Route path={"/COMMUNITY/:sort/:id"}>
           <ScrollToTop></ScrollToTop>
           <TopView sideInfo={sidePageInfo[4]}></TopView>
           <Communitysort fileUpload={fileUpload} database={database}></Communitysort>

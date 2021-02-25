@@ -44,9 +44,9 @@ const Infomation = (props) => {
                     <p>#갈쌈냉면 #갈비는 공짜 #설악본가 #여름엔 초계냉면</p>
                 </span>
                 <div className={styles.infoBtn}>
-                    <button><Link to="/COMMUNITY/가맹문의">가맹문의</Link></button>
+                    <button><Link to="/COMMUNITY/가맹문의/1">가맹문의</Link></button>
                     <button><Link to="/BRAND/Brand 소개" className={styles.link}>브랜드 소개</Link></button>
-                    <button><Link to="/COMMUNITY/고객 게시판" className={styles.link}>커뮤니티</Link></button>
+                    <button><Link to="/COMMUNITY/고객 게시판/1" className={styles.link}>커뮤니티</Link></button>
                 </div>
             </div>
         </div>

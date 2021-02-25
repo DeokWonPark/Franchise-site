@@ -27,7 +27,7 @@ const TopView = ({sideInfo}) => {
                     if(param.sort===item){
                         flag=true
                     }
-                    return <li key={item} className={flag?styles.on:""}><Link to={`/${sideInfo.name}/${item}`} className={styles.link}>{item}</Link></li>
+                    return <li key={item} className={flag?styles.on:""}><Link to={`/${sideInfo.name}/${item}/1`} className={styles.link}>{item}</Link></li>
                 })}
             </ul>
         </div>

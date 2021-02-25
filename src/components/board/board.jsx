@@ -5,14 +5,17 @@ import styles from './board.module.css';
 import BoardItem from './boarditem/boardItem'
 import { useEffect } from 'react';
 import PwdModal from './pwdModal/pwdModal';
+import WriteView from './writeView/writeView';
 
 const Board = ({database}) => {
     let num=0;
     const history=useHistory();
+    const param=useParams();
 
     const [data,setData]=useState({});
     const [modalOpen,setOpen]=useState(false);
     const [selectItem,setItem]=useState(null);
+    const [writeView,setView]=useState(false);
     const [datalen,setdatalen]=useState(Object.keys(data).length);
 
     useEffect(()=>{
@@ -23,7 +26,14 @@ const Board = ({database}) => {
         return ()=>{unmount();}
     },[database])
 
-    //const param=useParams();
+    useEffect(()=>{
+        if(param.id[0]==="v"){
+            setView(true);
+        }
+        else{
+            setView(false);
+        }
+    },[param])
 
     const handleClick=(item)=>{
         setOpen(true);
@@ -35,13 +45,13 @@ const Board = ({database}) => {
 
     const verificationPwd=(inputData)=>{
         console.log(selectItem);
-        
+
         setOpen(false);
         const html=document.querySelector("html");
         html.style.overflow = "auto";
 
         if(inputData===selectItem.password){
-            history.push(`/COMMUNITY/고객 게시판/${selectItem.id}`);
+            history.push(`/COMMUNITY/고객 게시판/v${selectItem.id}`);
         }
         else{
             alert("비밀번호가 일치하지 않습니다.");
@@ -56,11 +66,16 @@ const Board = ({database}) => {
         }
     }
 
-    return <><section className={styles.board}>
+    const removeWrite=(id)=>{
+        database.remove(`Question/${id}`);
+        history.push("/COMMUNITY/고객 게시판/1");
+    }
+
+    return <>{!writeView?<section className={styles.board}>
         <h2 className={styles.title}>고객 게시판</h2>
         <div className={styles.topBox}>
             <span>{`Total ${datalen}건 1 페이지`}</span>
-            <button><Link to="/COMMUNITY/가맹문의" className={styles.link}><i className="fas fa-pencil-alt"></i>가맹문의</Link></button>
+            <button><Link to="/COMMUNITY/가맹문의/1" className={styles.link}><i className="fas fa-pencil-alt"></i>가맹문의</Link></button>
         </div>
         <table className={styles.boardTable}>
             <tbody>
@@ -79,11 +94,11 @@ const Board = ({database}) => {
             </tbody>
         </table>
         <ul className={styles.pagination}>
-            <li><Link to="/COMMUNITY/고객 게시판/"><i className="fas fa-angle-double-left"></i></Link></li>
-            <li><Link to="/COMMUNITY/고객 게시판/">1</Link></li>
-            <li><Link to="/COMMUNITY/고객 게시판/end"><i className="fas fa-angle-double-right"></i></Link></li>
+            <li><Link to="/COMMUNITY/고객 게시판/1"><i className="fas fa-angle-double-left"></i></Link></li>
+            <li><Link to="/COMMUNITY/고객 게시판/1">1</Link></li>
+            <li><Link to="/COMMUNITY/고객 게시판/1"><i className="fas fa-angle-double-right"></i></Link></li>
         </ul>
-    </section>
+    </section>:<WriteView data={data} onDelete={removeWrite}></WriteView>}
     {modalOpen?<div 
     className={styles.ModalBox} 
     onClick={handleModalClose} 

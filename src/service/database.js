@@ -4,6 +4,10 @@ class Database{
         firebaseDatabase.ref(path).set(data);
     }
 
+    remove(path){
+        firebaseDatabase.ref(path).remove();
+    }
+
     read(path,onUpdate){
         const readDB=firebaseDatabase.ref(path);
         readDB.on('value',(snapshot) => {
