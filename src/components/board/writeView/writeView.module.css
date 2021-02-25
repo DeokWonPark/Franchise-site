@@ -27,7 +27,12 @@
     height: 30vw;
     padding: 3vw 1vw;
     border-bottom: 1px solid rgb(221, 220, 220);
+    overflow: auto;
 }
+.writeBox .inner .main::-webkit-scrollbar{ 
+    display:none; 
+}
+
 .writeBox .inner .file{
     padding: 15px;
     background-color: rgb(253, 253, 253);

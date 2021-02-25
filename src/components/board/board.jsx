@@ -44,7 +44,6 @@ const Board = ({database}) => {
     }
 
     const verificationPwd=(inputData)=>{
-        console.log(selectItem);
 
         setOpen(false);
         const html=document.querySelector("html");
@@ -69,6 +68,18 @@ const Board = ({database}) => {
     const removeWrite=(id)=>{
         database.remove(`Question/${id}`);
         history.push("/COMMUNITY/고객 게시판/1");
+    }
+
+    const handleAddAnswer=(text,item)=>{
+        console.log(text,item);//
+        const date=new Date();
+        const dateNow=`${date.getFullYear()} / ${date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1} - ${date.getDate()}`;
+        const update={...item};
+        const newMessage=`${update.message} <div id="answer"> <hr/> <p>답변 - ${dateNow}</p> <pre>${text}</pre> </div>`;
+        update.message=newMessage;
+        console.log(update);//
+        database.write(`Question/${item.id}`,update);
+
     }
 
     return <>{!writeView?<section className={styles.board}>
@@ -98,7 +109,7 @@ const Board = ({database}) => {
             <li><Link to="/COMMUNITY/고객 게시판/1">1</Link></li>
             <li><Link to="/COMMUNITY/고객 게시판/1"><i className="fas fa-angle-double-right"></i></Link></li>
         </ul>
-    </section>:<WriteView data={data} onDelete={removeWrite}></WriteView>}
+    </section>:<WriteView data={data} onDelete={removeWrite} onAdd={handleAddAnswer}></WriteView>}
     {modalOpen?<div 
     className={styles.ModalBox} 
     onClick={handleModalClose} 

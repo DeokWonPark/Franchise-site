@@ -2,12 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useEffect, useRef } from 'react/cjs/react.development';
+import Answer from '../answer/answer';
 import styles from './writeView.module.css';
 
-const WriteView = ({data,onDelete}) => {
+const WriteView = ({data,onDelete,onAdd}) => {
     const param=useParams();
     const mainRef=useRef(null);
+    const answerRef=useRef(null);
     const [item,setItem]=useState();
+    const [onAnswer,setAnswer]=useState(false);
 
     useEffect(()=>{
         const id=param.id.substring(1,param.id.length);
@@ -22,7 +25,20 @@ const WriteView = ({data,onDelete}) => {
             onDelete(item.id);
         }
     }
-    console.log(item)
+
+    const handleAnswer=()=>{
+        setAnswer(true);
+    }
+
+    const handleCancel=()=>{
+        setAnswer(false);
+    }
+
+    const handleAddAnswer=()=>{
+        onAdd(answerRef.current.value,item);
+        setAnswer(false);
+    }
+
     return <>{item && <section className={styles.writeBox}>
         <div className={styles.inner}>
             <div className={styles.info}>
@@ -35,10 +51,16 @@ const WriteView = ({data,onDelete}) => {
             </div>
             <div className={styles.main} ref={mainRef}></div>
             <div className={styles.file}>{item.file!=="#"?<a href={item.file} download={item.fileName}>{`첨부파일 ${item.fileName}`}</a>:<></>}</div>
+            {onAnswer && <Answer answerRef={answerRef}></Answer>}
             <div className={styles.footerBtn}>
-                <button className={styles.highlight}>답변</button>
-                {/* <button>수정</button> */}
+                {!onAnswer && <>
+                <button className={styles.highlight} onClick={handleAnswer}>답변</button>
                 <button onClick={handleDelete}>삭제</button>
+                </>}
+                {onAnswer &&<>
+                <button className={styles.highlight} onClick={handleAddAnswer}>답변등록</button>
+                <button onClick={handleCancel}>취소</button>
+                </>}
             </div>
         </div>
     </section>}</>

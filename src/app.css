@@ -5,3 +5,17 @@ body{
 .full-page-controls{
     display: none;
 }
+/* border component */
+#answer{ 
+    margin-top: 10%;
+}
+#answer hr{
+    border: 1px dashed gray;
+}
+#answer p{
+    background-color: rgb(165, 165, 165);
+    margin-bottom: 10px;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
