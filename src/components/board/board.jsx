@@ -1,13 +1,17 @@
 import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useRef, useState } from 'react/cjs/react.development';
 import {Link, useParams} from 'react-router-dom';
 import styles from './board.module.css';
 import BoardItem from './boarditem/boardItem'
 import { useEffect } from 'react';
+import PwdModal from './pwdModal/pwdModal';
 
 const Board = ({database}) => {
     let num=0;
+
     const [data,setData]=useState({});
+    const [modalOpen,setOpen]=useState(false);
+    const [datalen,setdatalen]=useState(Object.keys(data).length);
 
     useEffect(()=>{
         const unmount=database.read(`Question/`,(data)=>{
@@ -17,10 +21,23 @@ const Board = ({database}) => {
         return ()=>{unmount();}
     },[database])
 
-    const [datalen,setdatalen]=useState(Object.keys(data).length);
+    //const param=useParams();
 
-    const param=useParams();
-    return <section className={styles.board}>
+    const handleClick=(item)=>{
+        setOpen(true);
+        const html=document.querySelector("html");
+        html.style.overflow = "hidden";
+    }
+
+    const handleModalClose=(event)=>{
+        if(event.target.id==="bgbox" || event.target.id==="close" || event.target.tagName==="path"){
+            setOpen(false);
+            const html=document.querySelector("html");
+            html.style.overflow = "auto";
+        }
+    }
+
+    return <><section className={styles.board}>
         <h2 className={styles.title}>고객 게시판</h2>
         <div className={styles.topBox}>
             <span>{`Total ${datalen}건 1 페이지`}</span>
@@ -36,13 +53,9 @@ const Board = ({database}) => {
                     <th>날짜</th>
                     <th>확인</th>
                 </tr>
-                {/* {data.map((item)=>{
-                    num++;
-                    return <BoardItem item={item} key={num} num={num}></BoardItem>
-                })} */}
                 {Object.keys(data).map((key)=>{
                     num++;
-                    return <BoardItem item={data[key]} key={num} num={num}></BoardItem>
+                    return <BoardItem item={data[key]} key={num} num={num} onModal={handleClick}></BoardItem>
                 })}
             </tbody>
         </table>
@@ -52,6 +65,8 @@ const Board = ({database}) => {
             <li><Link to="/COMMUNITY/고객 게시판/end"><i className="fas fa-angle-double-right"></i></Link></li>
         </ul>
     </section>
+    {modalOpen?<div className={styles.ModalBox} onClick={handleModalClose} id="bgbox"><PwdModal isOpen={modalOpen} onClose={handleModalClose}></PwdModal></div>:null}
+    </>
 }
 
 export default Board;

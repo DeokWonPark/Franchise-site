@@ -20,6 +20,7 @@
     "react-draft-wysiwyg": "^1.14.5",
     "react-encrypt": "^1.0.1",
     "react-full-page": "^0.1.11",
+    "react-modal": "^3.12.1",
     "react-naver-maps": "^0.0.13",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",

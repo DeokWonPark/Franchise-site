@@ -29,7 +29,7 @@ const Write = ({fileUpload,database}) => {
             file:files || "",
             message:message || "",
             text:textRef.current.value || "",
-            date:`${date.getMonth()+1} - ${date.getDate()}`,
+            date:`${date.getFullYear()} / ${date.getMonth()+1} - ${date.getDate()}`,
             confirm:false,
         }
         database.write(`Question/${write.id}`,write);
