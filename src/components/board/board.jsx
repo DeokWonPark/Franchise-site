@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef, useState } from 'react/cjs/react.development';
-import {Link, useParams} from 'react-router-dom';
+import {Link, useHistory, useParams} from 'react-router-dom';
 import styles from './board.module.css';
 import BoardItem from './boarditem/boardItem'
 import { useEffect } from 'react';
@@ -8,9 +8,11 @@ import PwdModal from './pwdModal/pwdModal';
 
 const Board = ({database}) => {
     let num=0;
+    const history=useHistory();
 
     const [data,setData]=useState({});
     const [modalOpen,setOpen]=useState(false);
+    const [selectItem,setItem]=useState(null);
     const [datalen,setdatalen]=useState(Object.keys(data).length);
 
     useEffect(()=>{
@@ -27,6 +29,23 @@ const Board = ({database}) => {
         setOpen(true);
         const html=document.querySelector("html");
         html.style.overflow = "hidden";
+
+        setItem(item);
+    }
+
+    const verificationPwd=(inputData)=>{
+        console.log(selectItem);
+        
+        setOpen(false);
+        const html=document.querySelector("html");
+        html.style.overflow = "auto";
+
+        if(inputData===selectItem.password){
+            history.push(`/COMMUNITY/고객 게시판/${selectItem.id}`);
+        }
+        else{
+            alert("비밀번호가 일치하지 않습니다.");
+        }
     }
 
     const handleModalClose=(event)=>{
@@ -65,7 +84,12 @@ const Board = ({database}) => {
             <li><Link to="/COMMUNITY/고객 게시판/end"><i className="fas fa-angle-double-right"></i></Link></li>
         </ul>
     </section>
-    {modalOpen?<div className={styles.ModalBox} onClick={handleModalClose} id="bgbox"><PwdModal isOpen={modalOpen} onClose={handleModalClose}></PwdModal></div>:null}
+    {modalOpen?<div 
+    className={styles.ModalBox} 
+    onClick={handleModalClose} 
+    id="bgbox">
+    <PwdModal isOpen={modalOpen} onClose={handleModalClose} verificationPwd={verificationPwd}></PwdModal>
+    </div>:null}
     </>
 }
 

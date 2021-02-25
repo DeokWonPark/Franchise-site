@@ -1,9 +1,16 @@
 import React from 'react';
+import { useRef } from 'react/cjs/react.development';
 import styles from './pwdModal.module.css';
 
-const PwdModal = ({isOpen,onClose}) => {
+const PwdModal = ({isOpen,onClose,verificationPwd}) => {
+    const inputRef=useRef(null);
     const handleClose=(event)=>{
         onClose(event)
+    }
+
+    const sumitPassword=(event)=>{
+        event.preventDefault();
+        verificationPwd(inputRef.current.value || "");
     }
     return <div className={`${styles.modal} ${isOpen?styles.open:""}`}>
         <button className={styles.close}><i className="fas fa-times" id="close" onClick={handleClose}></i></button>
@@ -13,8 +20,8 @@ const PwdModal = ({isOpen,onClose}) => {
             <p>본인이시라면 비밀번호를 입력하세요.</p>
         </div>
         <form className={styles.form}>
-            <input type="password" name="password" required/>
-            <button>확인</button>
+            <input type="password" name="password" required ref={inputRef}/>
+            <button onClick={sumitPassword}>확인</button>
         </form>
     </div>
 }
