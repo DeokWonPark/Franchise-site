@@ -17,7 +17,7 @@ const BoardItem = ({item,num,onModal}) => {
     }
     return <tr className={styles.data} onClick={handleClick}>
         <td>{num}</td>
-        <td className={styles.title}>{item.title}</td>
+        <td className={styles.title}>&nbsp;<i className="fas fa-lock"></i> {item.title}</td>
         <td>{item.name}</td>
         {/* <td>{item.Lookup}</td> */}
         <td>-</td>
