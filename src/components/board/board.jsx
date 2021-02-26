@@ -43,21 +43,21 @@ const Board = ({data}) => {
     }
     return <>
     <table className={styles.boardTable}>
-            <tbody>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>글쓴이</th>
-                    <th>조회</th>
-                    <th>날짜</th>
-                    <th>확인</th>
-                </tr>
-                {Object.keys(data).map((key)=>{
-                    num++;
-                    return <BoardItem item={data[key]} key={num} num={num} onModal={handleClick}></BoardItem>
-                })}
-            </tbody>
-        </table>
+        <tbody>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>조회</th>
+                <th>날짜</th>
+                <th>확인</th>
+            </tr>
+            {Object.keys(data).map((key)=>{
+                num++;
+                return <BoardItem item={data[key]} key={num} num={num} onModal={handleClick}></BoardItem>
+            })}
+        </tbody>
+    </table>
     {modalOpen?<div 
     className={styles.ModalBox} 
     onClick={handleModalClose} 
