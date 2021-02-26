@@ -1,0 +1,67 @@
+.boardAll{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+    position: relative;
+}
+.boardAll .title{
+    font-size: 32px;
+    padding-bottom: 60px;
+}
+.boardAll .topBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.boardAll .topBox span{
+    display: block;
+    background: rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 200;
+}
+.boardAll .topBox button{
+    text-decoration: none;
+    background: rgb(226, 167, 40);
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.boardAll .topBox button:hover{
+    background: rgb(235, 192, 102);
+}
+.boardAll .topBox button svg{
+    font-size: 16px;
+    padding-right: 3px;
+}
+.link{
+    font-weight: 700;
+}
+
+.boardAll .pagination{
+    display: flex;
+    padding-bottom: 10%;
+}
+.boardAll .pagination li{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background: rgb(229, 230, 231);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .boardAll{
+        padding: 0;
+    }
+}
