@@ -1,5 +1,4 @@
 import React from 'react';
-import Board from '../board/board';
 import Write from '../write/write';
 import Notice from '../notice/notice';
 import { useParams } from 'react-router-dom';
@@ -10,7 +9,6 @@ const Communitysort = ({fileUpload,database}) => {
     const param=useParams();
     const [curComponents,setCur]=useState(null);
     const [components,setComponents]=useState([
-        // {sort:"고객 게시판", components:<Board database={database}></Board>},
         {sort:"고객 게시판", components:<BoardAll database={database}></BoardAll>},
         {sort:"가맹문의", components:<Write fileUpload={fileUpload} database={database}></Write>},
         {sort:"공지사항", components:<Notice></Notice>},

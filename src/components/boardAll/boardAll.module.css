@@ -59,6 +59,9 @@
     margin: 2px;
     cursor: pointer;
 }
+.boardAll .pagination li.on{
+    background-color: rgb(126, 126, 126);
+}
 
 @media screen and (max-width:768px){
     .boardAll{

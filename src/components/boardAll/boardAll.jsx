@@ -15,6 +15,7 @@ const BoardAll = ({database}) => {
     let index=0;
     let page=0;
     let pageNav=0;
+    let id=Number.parseInt(param.id);
 
     useEffect(()=>{
         if(param.id[0]==="v"){
@@ -27,7 +28,8 @@ const BoardAll = ({database}) => {
 
     useEffect(()=>{
         const unmount=database.read(`Question/`,(data)=>{
-            setDatas(data);
+            const rev=reverseData(data);
+            setDatas(rev);
             setdatalen(Object.keys(datas).length);
         });
         return ()=>{unmount();}
@@ -37,10 +39,13 @@ const BoardAll = ({database}) => {
         const dataTempArr=[];
         const datalengh=Object.keys(datas).length;
         setdatalen(datalengh);
-        for(let i=0;i<=datalengh/10;i++){
+        let arrLen=datalengh/10;
+        if(datalengh%10===0){
+            arrLen--;
+        }
+        for(let i=0;i<=arrLen;i++){
             dataTempArr.push({});
         }
-        console.log(dataTempArr);
         for(let i of Object.keys(datas)){
             let key=Number.parseInt(index/10);
             dataTempArr[key][i]=datas[i];
@@ -49,6 +54,14 @@ const BoardAll = ({database}) => {
         setDataArr(dataTempArr);
     },[datas])
 
+    const reverseData=(data)=>{
+        const rev={};
+        const keys=Object.keys(data);
+        for(let i=keys.length-1;i>=0;i--){
+            rev[keys[i]]=data[keys[i]];
+        }
+        return rev;
+    }
 
     const removeWrite=(id)=>{
         database.remove(`Question/${id}`);
@@ -76,13 +89,13 @@ const BoardAll = ({database}) => {
         </div>
         {dataArr.map((data)=>{
             page++;
-            return <>{Number.parseInt(param.id)===page?<Board data={data}></Board>:<></>}</>
+            return <>{Number.parseInt(param.id)===page?<Board data={data} key={data.id}></Board>:<></>}</>
         })}
         <ul className={styles.pagination}>
             <Link to="/COMMUNITY/고객 게시판/1"><li><i className="fas fa-angle-double-left"></i></li></Link>
             {dataArr.map(()=>{
                 pageNav++;
-                return <Link to={`/COMMUNITY/고객 게시판/${pageNav}`}><li>{pageNav}</li></Link>
+                return <Link to={`/COMMUNITY/고객 게시판/${pageNav}`}><li className={id===pageNav?styles.on:""}>{pageNav}</li></Link>
             })}
             <Link to={`/COMMUNITY/고객 게시판/${pageNav}`}><li><i className="fas fa-angle-double-right"></i></li></Link>
         </ul>
