@@ -63,6 +63,15 @@
     background-color: rgb(126, 126, 126);
 }
 
+.noData{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: lightgray;
+    box-sizing: border-box;
+}
+
 @media screen and (max-width:768px){
     .boardAll{
         padding: 0;

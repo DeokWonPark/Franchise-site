@@ -31,7 +31,7 @@ const Write = ({fileUpload,database}) => {
         const date=new Date();
         const write={
             id:Date.now(),
-            order:dataLen,
+            order:dataLen+1,
             title:titleRef.current.value,
             name:nameRef.current.value,
             password:passwordRef.current.value,

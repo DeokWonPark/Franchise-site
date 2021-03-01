@@ -91,6 +91,7 @@ const BoardAll = ({database}) => {
             page++;
             return <>{Number.parseInt(param.id)===page?<Board data={data} key={data.id}></Board>:<></>}</>
         })}
+        {dataArr.length===0?<div className={styles.noData}>등록된 게시글이 없습니다.</div>:<></>}
         <ul className={styles.pagination}>
             <Link to="/COMMUNITY/고객 게시판/1"><li><i className="fas fa-angle-double-left"></i></li></Link>
             {dataArr.map(()=>{
