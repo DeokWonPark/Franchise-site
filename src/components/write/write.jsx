@@ -5,6 +5,7 @@ import EditorBox from './editorBox/editorBox';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react/cjs/react.development';
 
 const Write = ({fileUpload,database}) => {
     const titleRef=useRef(null);
@@ -16,13 +17,21 @@ const Write = ({fileUpload,database}) => {
     const [files,setFiles]=useState({fileURL:null,fileName:null});
     const [loading,setLoading]=useState(false);
     const [message,setMessage]=useState(null);
+    const [dataLen,setLength]=useState(null);
 
     const history=useHistory();
+
+    useEffect(()=>{
+        database.read(`Question`,(data)=>{
+            setLength(Object.keys(data).length);
+        })
+    },[])
 
     const handlesubmit=async (event)=>{
         const date=new Date();
         const write={
             id:Date.now(),
+            order:dataLen,
             title:titleRef.current.value,
             name:nameRef.current.value,
             password:passwordRef.current.value,

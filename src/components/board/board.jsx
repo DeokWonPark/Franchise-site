@@ -6,7 +6,6 @@ import BoardItem from './boarditem/boardItem'
 import PwdModal from './pwdModal/pwdModal';
 
 const Board = ({data}) => {
-    let num=0;
     const history=useHistory();
 
     const [modalOpen,setOpen]=useState(false);
@@ -53,8 +52,7 @@ const Board = ({data}) => {
                 <th>확인</th>
             </tr>
             {Object.keys(data).map((key)=>{
-                num++;
-                return <BoardItem item={data[key]} key={num} num={num} onModal={handleClick}></BoardItem>
+                return <BoardItem item={data[key]} key={key} onModal={handleClick}></BoardItem>
             })}
         </tbody>
     </table>
