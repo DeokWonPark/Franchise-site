@@ -20,7 +20,7 @@ const PwdModal = ({isOpen,onClose,verificationPwd}) => {
             <p>본인이시라면 비밀번호를 입력하세요.</p>
         </div>
         <form className={styles.form}>
-            <input type="password" name="password" required ref={inputRef}/>
+            <input type="password" name="password" required ref={inputRef} autoFocus/>
             <button onClick={sumitPassword}>확인</button>
         </form>
     </div>

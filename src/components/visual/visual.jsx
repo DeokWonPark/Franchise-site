@@ -6,7 +6,7 @@ import SlideItem from '../slideItem/slideItem';
 import styles from './visual.module.css';
 
 const Visual = (props) => {
-
+    
     const [slideItem,setItem]=useState([
         {
             tag:"#갈쌈냉면 #갈비는 공짜",
@@ -43,7 +43,7 @@ const Visual = (props) => {
         visualref.current.style.marginLeft=`calc(${time}*-100%)`;
     })
      const intervalFunc=useCallback(()=>{
-        if(bulletref.current===null){
+        if(bulletref.current==null){
             return;
         }
         bulletref.current.children[time].style.background="#fff";

@@ -16,7 +16,7 @@ const WriteView = ({data,onDelete,onAdd}) => {
         const id=param.id.substring(1,param.id.length);
         setItem(data[id]);
 
-        item && (mainRef.current.innerHTML=item.message);
+        item && (mainRef.current.innerHTML=item.message+item.text);
     });
 
     const handleDelete=()=>{

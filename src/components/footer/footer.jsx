@@ -1,7 +1,8 @@
 import React from 'react';
+import { memo } from 'react';
 import styles from './footer.module.css';
 
-const Footer = (props) => {
+const Footer = memo((props) => {
     return <footer className={styles.footer}>
         <div className={styles.footerDescription}>
             <span className={styles.description}>
@@ -23,11 +24,7 @@ const Footer = (props) => {
                 <p>COPYRIGHT BY 2021 설악본가. ALL RIGHT RESERVED</p>
             </span>
         </div>
-        {/* <div className={styles.BtnBox}>
-            <button className={styles.blogBtn}><a href="https://blog.naver.com/skyh1526ss"><img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/naver_logo.png" alt="blog"/></a></button>
-            <button></button>
-        </div> */}
     </footer>
-}
+})
 
 export default Footer;

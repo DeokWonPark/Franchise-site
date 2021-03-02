@@ -2,8 +2,9 @@ import React from 'react';
 import { useRef, useEffect } from 'react/cjs/react.development';
 import {Link, useParams} from 'react-router-dom';
 import styles from './topView.module.css';
+import { memo } from 'react';
 
-const TopView = ({sideInfo}) => {
+const TopView = memo(({sideInfo}) => {
     const imgref=useRef(null);
     const titleref=useRef(null);
     const param=useParams();
@@ -12,7 +13,7 @@ const TopView = ({sideInfo}) => {
         if(imgref.current!==null){
             imgref.current.style.backgroundImage=`url(${sideInfo.img})`;
         }
-    });
+    },[sideInfo]);
 
     return <section className={styles.topView}>
         <div className={styles.topImg} ref={imgref}>
@@ -32,6 +33,6 @@ const TopView = ({sideInfo}) => {
             </ul>
         </div>
     </section>
-}
+})
 
 export default TopView;

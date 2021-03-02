@@ -1,8 +1,9 @@
 import React from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './salesItem.module.css';
 
-const SalesItem = ({salesItem,handleArrow}) => {
+const SalesItem = memo(({salesItem,handleArrow}) => {
     const goMarket=()=>{
         alert("죄송합니다. 현재 준비중인 서비스입니다!");
     }
@@ -22,6 +23,6 @@ const SalesItem = ({salesItem,handleArrow}) => {
         </div>
         <button className={styles.arrow} onClick={handleArrow.bind(this,"right")}><i className="fas fa-chevron-right"></i></button>
     </li>
-}
+})
 
 export default SalesItem;

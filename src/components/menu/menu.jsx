@@ -1,35 +1,43 @@
 import React from 'react';
 import { useState, useRef } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 import MenuItem from '../menuItem/menuItem';
 import styles from './menu.module.css';
 
 const Menu = (props) => {
-    const [menu,setMenu]=useState([
-        {
-            enName:"Noodle Menu",
-            koName:"면 요리",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%83%89%EB%A9%B4logo2.png",
-        },
-        {
-            enName:"Korean Set Table",
-            koName:"백반 메뉴",
-            img:"https://github.com/DeokWonPark/Franchise-site/blob/master/public/images/%EC%A0%95%EC%8B%9D_3.PNG?raw=true",
-        },
-        {
-            enName:"Korean Soup",
-            koName:"찜&탕 메뉴",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84%ED%83%95logo.PNG",
-        },
-        {
-            enName:"Side Menu",
-            koName:"사이드 메뉴",
-            img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84.PNG",
-        },
-    ]);
-
+    const [menu,setMenu]=useState([]);
+    useEffect(async()=>{
+        const loadMenu=await loadMenuData();
+        setMenu(loadMenu);
+    },[])
+    const loadMenuData=()=>{
+        return fetch('/Data/menu.json')
+        .then((response)=>response.json());
+    }
+    // const [menu,setMenu]=useState([
+    //     {
+    //         enName:"Noodle Menu",
+    //         koName:"면 요리",
+    //         img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EB%83%89%EB%A9%B4logo2.png",
+    //     },
+    //     {
+    //         enName:"Korean Set Table",
+    //         koName:"백반 메뉴",
+    //         img:"https://github.com/DeokWonPark/Franchise-site/blob/master/public/images/%EC%A0%95%EC%8B%9D_3.PNG?raw=true",
+    //     },
+    //     {
+    //         enName:"Korean Soup",
+    //         koName:"찜&탕 메뉴",
+    //         img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84%ED%83%95logo.PNG",
+    //     },
+    //     {
+    //         enName:"Side Menu",
+    //         koName:"사이드 메뉴",
+    //         img:"https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/%EA%B0%88%EB%B9%84.PNG",
+    //     },
+    // ]);
     const menufooterref=useRef(null);
     const menufooterref_=useRef(null);
-    //const checkpoint2ref=useRef(null);
 
     return <section className={styles.menu}>
         <div className={styles.menuHead}>

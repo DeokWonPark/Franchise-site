@@ -1,6 +1,5 @@
 import './app.css';
 import { BrowserRouter ,Switch, Route} from 'react-router-dom';
-import { FullPage, Slide } from 'react-full-page';
 import { useState } from 'react/cjs/react.development';
 import Header from './components/header/header';
 import Sidebar from './components/sidebar/sidebar';
@@ -55,19 +54,6 @@ function App({fileUpload,database}) {
   return <BrowserRouter>
     <Switch>
       <Route path={"/"} exact={true}>
-      {/* <FullPage controls>
-        <Slide>
-          <Header></Header>
-          <Visual></Visual>
-        </Slide>
-        <Slide>
-          <Menu></Menu>
-        </Slide>
-        <Slide>
-          <Infomation></Infomation>
-          <Footer></Footer>
-        </Slide>
-      </FullPage> */}
         <Header></Header>
         <Sidebar></Sidebar>
         <Visual></Visual>
@@ -77,14 +63,6 @@ function App({fileUpload,database}) {
         <Footer></Footer>
       </Route>
 
-      {/* {sidePageInfo.map(sideInfo =>{
-        console.log(sideInfo);
-        <Route path={"/"}>
-          <Header></Header>
-          <TopView sideInfo={sideInfo}></TopView>
-          <Footer></Footer>
-        </Route>
-      })} */}
 
       <Route path={"/BRAND"}>
         <ScrollToTop></ScrollToTop>

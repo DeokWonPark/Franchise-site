@@ -22,10 +22,6 @@ const Infomation = (props) => {
             }
         }
         else{
-            // const scrolly=infoRef.current.getBoundingClientRect().top;
-            // if(window.innerHeight < scrolly){
-            //     infoRef.current.classList.remove(styles.show);
-            // }
             window.removeEventListener('scroll',scrollInfoFunc);
         }
     }

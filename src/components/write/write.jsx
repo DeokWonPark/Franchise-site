@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './write.module.css';
 import EditorBox from './editorBox/editorBox';
-//import ReactEncrypt from 'react-encrypt'; 
 import { useRef } from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';

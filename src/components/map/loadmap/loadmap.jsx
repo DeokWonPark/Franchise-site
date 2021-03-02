@@ -14,17 +14,12 @@ const Loadmap = ({info}) => {
             return;
         }
         if(!loadref.current.classList.contains(styles.show)){
-            //const offset=loadref.current.getBoundingClientRect().bottom-loadref.current.getBoundingClientRect().top/2
             const scrolly=loadref.current.getBoundingClientRect().top;
             if(window.innerHeight > scrolly){
                 loadref.current.classList.add(styles.show);
             }
         }
         else{
-            // const scrolly=loadref.current.getBoundingClientRect().top;
-            // if(window.innerHeight < scrolly){
-            //     loadref.current.classList.remove(styles.show);
-            // }
             window.removeEventListener('scroll',scrollFunc);
         }
     }

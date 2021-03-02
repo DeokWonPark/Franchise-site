@@ -1,10 +1,11 @@
 import React from 'react';
+import { memo } from 'react';
 import { useHistory,Link } from 'react-router-dom';
 import { useRef } from 'react/cjs/react.development';
 import Nav from '../nav/nav';
 import styles from './header.module.css';
 
-const Header = (props) => {
+const Header = memo((props) => {
     const history=useHistory();
     const navref=useRef(null);
     const sideref=useRef(null);
@@ -36,9 +37,6 @@ const Header = (props) => {
                 <div className={styles.sideBtn}>
                     <button className={styles.blogBtn}><a href="https://blog.naver.com/skyh1526ss"><img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/naver_logo.png" alt="blog"/></a></button>
                     <button className={styles.storeBtn} onClick={GoMarket}><span>Oline Market</span></button>
-                    {/* <button className={styles.membershipBtn}><a href="tel:010-7515-9710"><i className="fas fa-phone-square"></i></a></button>
-                    <button className={styles.membershipBtn}><Link to="/COMMUNITY/가맹문의"><i className="fas fa-comments"></i></Link></button> */}
-                    {/* <button className={styles.userBtn}><i className="fas fa-user"></i></button> */}
                 </div>
             </div>
             <Nav navref={navref}></Nav>
@@ -48,6 +46,6 @@ const Header = (props) => {
             </div>
         </div>
     </header>
-}
+})
 
 export default Header;

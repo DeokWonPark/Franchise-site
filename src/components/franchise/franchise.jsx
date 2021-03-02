@@ -18,7 +18,6 @@ const Franchise = (props) => {
             </div>
             <div className={styles.info}>
                 <i className="fas fa-map-marked-alt"></i>
-                {/* <p>갈비쌈 냉면 대표</p> */}
                 <h3>구미 전지역 가맹점 보유</h3>
             </div>
             <div className={styles.info}>
