@@ -18,7 +18,6 @@
     width: 100%;
     height: 40vw;
     background: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/logo2.png");
-    /* background: url("https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/main3.jpg"); */
     background-repeat: no-repeat;
     background-size: 100% 90%;
     margin-bottom: 150px;
@@ -37,7 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 24px;
+    font-size: 22px;
     color: white;
     line-height: 1.5em;
 }
@@ -62,7 +61,6 @@
     height: 65vw;
 }
 .sloganBox .descriptionBox{
-    /* align-self: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,6 +146,7 @@
     }
     .brand .brandImg .brandContent .description{
         font-size: 14px;
+        align-items: flex-start;
     }
 }
 @media screen and (max-width:480px){

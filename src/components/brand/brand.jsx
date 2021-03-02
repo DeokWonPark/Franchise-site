@@ -28,11 +28,11 @@ const Brand = (props) => {
         <div className={styles.brandImg}>
             <div className={styles.brandContent}>
                 <span className={styles.description}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>안녕하십니까 JKFOOD 대표 박진국입니다.</p>
+                <p>저희 갈비쌈 냉면은 메밀냉면에 숯불갈비와 같이 싸먹는 음식입니다.</p>
+                <p>갈비쌈 냉면의 시작은 <strong>왜? 냉면은 갈비집에서 갈비를 먹은 후 후식으로 먹을때 가장 맛있을까?</strong> 라는 의문과 함께 시작되었습니다.</p>
+                <p>냉면을 주문하면 갈비와 함께 제공하게 되었고 이것은 순식간에 인기를 끌어 구미지역에서 가맹문의가 생겨나기 시작했습니다.</p>
+                <p>2021년 현재 저희 갈비쌈 냉면은 구미 전지역에 가맹점을 보유하고 있으며, 경북 전지역으로 확장해 나가고 있습니다.</p>
                 </span>
             </div>
         </div>
