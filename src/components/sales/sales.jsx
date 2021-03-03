@@ -2,7 +2,7 @@ import React from 'react';
 import { memo } from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import SalesItem from '../salesItem/salesItem';
 import styles from './sales.module.css';
 

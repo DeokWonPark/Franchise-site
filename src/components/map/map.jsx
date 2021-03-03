@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './map.module.css';
 import { RenderAfterNavermapsLoaded,NaverMap,Marker } from 'react-naver-maps';
 import Loadmap from './loadmap/loadmap';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 
 const Map = (props) => {
   const [loadmapInfo,setInfo]=useState([]);

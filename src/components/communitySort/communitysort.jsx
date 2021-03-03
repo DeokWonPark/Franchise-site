@@ -2,7 +2,7 @@ import React from 'react';
 import Write from '../write/write';
 import Notice from '../notice/notice';
 import { useParams } from 'react-router-dom';
-import { useState,useEffect } from 'react/cjs/react.development';
+import { useState,useEffect } from 'react';
 import BoardAll from '../boardAll/boardAll';
 
 const Communitysort = ({fileUpload,database}) => {

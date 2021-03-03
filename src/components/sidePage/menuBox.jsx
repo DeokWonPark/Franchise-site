@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef, useEffect } from 'react/cjs/react.development';
+import { useRef, useEffect } from 'react';
 import styles from './menuBox.module.css';
 import {Link,useParams} from 'react-router-dom';
 

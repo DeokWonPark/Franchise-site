@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState,useEffect } from 'react/cjs/react.development';
+import { useState,useEffect } from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
 import styles from './boardAll.module.css';
 import Board from '../board/board';

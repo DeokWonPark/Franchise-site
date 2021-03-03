@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useEffect, useRef } from 'react/cjs/react.development';
+import { useEffect, useRef } from 'react';
 import Answer from '../answer/answer';
 import styles from './writeView.module.css';
 

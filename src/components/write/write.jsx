@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './write.module.css';
 import EditorBox from './editorBox/editorBox';
-import { useRef } from 'react';
-import { useState } from 'react';
+import { useRef,useState,useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useEffect } from 'react/cjs/react.development';
+
 
 const Write = ({fileUpload,database}) => {
     const titleRef=useRef(null);

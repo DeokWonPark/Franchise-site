@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useRef, useState } from 'react/cjs/react.development';
+import { useEffect, useRef, useState } from 'react';
 import styles from './menuVisual.module.css';
 import MenuBox from './menuBox';
 import { useParams } from 'react-router-dom';

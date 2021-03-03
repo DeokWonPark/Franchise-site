@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useRef } from 'react/cjs/react.development';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './infomation.module.css';
 

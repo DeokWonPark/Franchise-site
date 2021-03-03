@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState } from 'react/cjs/react.development';
+import {useState } from 'react';
 import {useHistory} from 'react-router-dom';
 import styles from './board.module.css';
 import BoardItem from './boarditem/boardItem'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useRef } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import MenuItem from '../menuItem/menuItem';
 import styles from './menu.module.css';
 

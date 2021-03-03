@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef } from 'react/cjs/react.development';
+import { useRef } from 'react';
 import styles from './pwdModal.module.css';
 
 const PwdModal = ({isOpen,onClose,verificationPwd}) => {

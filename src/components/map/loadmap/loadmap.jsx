@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef,useEffect } from 'react/cjs/react.development';
+import { useRef,useEffect } from 'react';
 import styles from './loadmap.module.css';
 
 const Loadmap = ({info}) => {
