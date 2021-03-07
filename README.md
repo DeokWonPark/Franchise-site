@@ -1,4 +1,4 @@
-# 프랜차이즈 페이지 - 갈비쌈 냉면 <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/logo2.png" width="100px" />
+# 프랜차이즈 페이지 - 갈비쌈 냉면       <img src="https://raw.githubusercontent.com/DeokWonPark/Franchise-site/master/public/images/logo2.png" width="90px" />
 
 React Hook, PostCSS을 사용한 프론트엔드 기능 개발<img src="https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png" width="30px" />
 
